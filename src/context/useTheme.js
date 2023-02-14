@@ -7,7 +7,7 @@ import { useState } from "react";
 const ThemeContext = createContext({});
 
 const AuthProvider = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(null);
+  const [darkMode, setDarkMode] = useState(true);
 
   // Dark Mode Toggle
   useEffect(() => {

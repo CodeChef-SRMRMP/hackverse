@@ -6,6 +6,6 @@
 
 @layer components {
   .navButton {
-    @apply text-black font-bold font-koulen text-2xl dark:text-white md:cursor-pointer;
+    @apply text-black font-bold font-koulen text-2xl dark:text-white cursor-pointer;
   }
 }

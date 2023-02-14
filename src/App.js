@@ -1,10 +1,19 @@
 import Header from "./components/Header";
+import { ConfigProvider, theme } from "antd";
+import { useTheme } from "./context/useTheme";
 
 const App = () => {
+  const { darkMode } = useTheme();
   return (
-    <div className="bg-white dark:bg-black min-h-screen transition-all duration-700 ease-out">
-      <Header />
-    </div>
+    <ConfigProvider
+      theme={{
+        algorithm: darkMode ? theme.darkAlgorithm : theme.defaultAlgorithm,
+      }}
+    >
+      <div className="bg-white dark:bg-black">
+        <Header />
+      </div>
+    </ConfigProvider>
   );
 };
 
