@@ -1,4 +1,4 @@
-import { Drawer, Switch } from "antd";
+import { Drawer } from "antd";
 import React, { useState } from "react";
 import { BsSunFill, BsMoonFill } from "react-icons/bs";
 import { IoClose } from "react-icons/io5";
