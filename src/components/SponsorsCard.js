@@ -9,15 +9,17 @@ const SponsorsCard = () => {
       </p>
       <div className="m-4 rounded-lg bg-[#202021] mx-5 md:mx-10 lg:mx-20 p-5 py-7 text-white dark:text-black dark:shadow-gray-500">
         <Marquee pauseOnHover gradient={false} speed={200}>
-          <div className="flex items-center space-x-20">
+          <div className="flex items-center space-x-20 mx-10">
             <img width={200} src={require("../sampleAssets/1.png")} alt="" />
+            <img width={200} src={require("../sampleAssets/2.png")} alt="" />
+            <img width={200} src={require("../sampleAssets/2.png")} alt="" />
             <img width={200} src={require("../sampleAssets/2.png")} alt="" />
             <img width={200} src={require("../sampleAssets/3.png")} alt="" />
             <img width={200} src={require("../sampleAssets/4.png")} alt="" />
+            <img width={200} src={require("../sampleAssets/4.png")} alt="" />
+            <img width={200} src={require("../sampleAssets/4.png")} alt="" />
             <img width={200} src={require("../sampleAssets/5.png")} alt="" />
-            <img width={200} src={require("../sampleAssets/6.svg")} alt="" />
-            <img width={200} src={require("../sampleAssets/7.svg")} alt="" />
-            <img width={200} src={require("../sampleAssets/8.svg")} alt="" />
+            <img width={200} src={require("../sampleAssets/5.png")} alt="" />
           </div>
         </Marquee>
       </div>
