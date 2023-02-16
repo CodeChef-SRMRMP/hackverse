@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import GDSC from '../assets/gdsc.png';
 import Kanalabs from '../assets/kanalabs.png';
 import Koii from '../assets/koii.png';
-import { Transition } from '@headlessui/react';
 
 const CommunityPartnersImages = [
   {
@@ -20,56 +19,155 @@ const CommunityPartnersImages = [
 ];
 
 const CommunityPartnerCard = () => {
-  const [current, setCurrent] = useState(0);
-
-  const TotalSponsors = CommunityPartnersImages.length;
-
-  const nextSlide = () => {
-    setCurrent(current === TotalSponsors - 1 ? 0 : current + 1);
-  };
+  const images = CommunityPartnersImages;
+  const windowWidth = window.innerWidth;
+  const numberOfSlides =
+    windowWidth < 768 ? 1 : windowWidth < 1024 ? 2 : windowWidth < 1280 ? 3 : 4;
+  const interval = 5000;
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const slideRef = useRef(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [current]);
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, interval);
+
+    return () => clearInterval(timer);
+  }, [images.length, interval]);
+
+  useEffect(() => {
+    slideRef.current.style.transition = 'transform 0.5s ease-out';
+    slideRef.current.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }, [currentIndex]);
+
+  useEffect(() => {
+    const handleTransitionEnd = () => {
+      if (currentIndex === images.length) {
+        setCurrentIndex(0);
+        slideRef.current.style.transition = 'none';
+        slideRef.current.style.transform = `translateX(0)`;
+      }
+    };
+
+    slideRef.current.addEventListener('transitionend', handleTransitionEnd);
+
+    return () =>
+      slideRef.current.removeEventListener(
+        'transitionend',
+        handleTransitionEnd
+      );
+  }, [currentIndex, images.length]);
 
   return (
-    <div className="w-screen relative bg-black ">
-      <h1 className="text-black text-center dark:text-white ml-5 md:ml-10 lg:ml-20 font-bold text-3xl font-koulen mt-10 ">
+    <div className="w-screen relative  overflow-hidden px-5 md:px-10 lg:px-20">
+      <h1 className="text-black text-center dark:text-white  font-bold text-3xl font-koulen mt-10 ">
         Community Partners
       </h1>
-      <div className="flex py-4 px-4 md:px-8 lg:px-12 gap-5 overflow-scroll scrollbar-hide relative">
+      <div
+        ref={slideRef}
+        className="flex py-5  scrollbar-hide duration-200 transition-all max-w-screen ">
         {CommunityPartnersImages &&
           CommunityPartnersImages.map(({ image }, i) => (
-            <Transition
-              show={i === current}
-              enter="transition ease-in-out duration-3000 transform"
-              enterFrom="translate-x-full"
-              enterTo="translate-x-0"
-              leave="transition ease-in-out duration-3000 transform"
-              leaveFrom="translate-x-0"
-              leaveTo="-translate-x-full"
-              key={i * 100}
-              className={`bg-[#202021] backdrop-blur-xl transition-all  flex items-center justify-center duration-[1000ms] animate-scroll-hide  flex-shrink-0 w-full ${
-                i === current ? '' : 'opacity-0 '
-              } rounded-lg h-[12rem] md:h-[13rem] lg:h-[15rem] `}>
-              <img
-                src={image}
-                alt="community partner"
-                className="w-1/2 h-1/2 object-fit"
-              />
-            </Transition>
+            <div
+              key={i}
+              alt={`slide-${i}`}
+              className={`bg-[#202021] backdrop-blur-xl transition-all   duration-[1000ms] flex items-center justify-center gap-5 flex-shrink-0 w-full rounded-lg h-[12rem] px-10 md:h-[13rem]  lg:h-[15rem] opacity-0 ${
+                currentIndex === i && 'opacity-100'
+              }`}>
+              {/* Mobile */}
+              <div className="md:hidden flex items-center justify-center ">
+                <img
+                  src={image}
+                  alt="community partner"
+                  className="w-[100%] h-[100%] object-fit"
+                />
+              </div>
+              {/* Tablet */}
+
+              <div className="hidden md:w-full mx-5 gap-10 md:grid md:grid-cols-2 lg:hidden">
+                <div className="w-full flex items-center justify-center ">
+                  <img
+                    src={image}
+                    alt="community partner"
+                    className=" object-fit"
+                  />
+                </div>
+                <div className="w-full flex items-center justify-center ">
+                  <img
+                    src={image}
+                    alt="community partner"
+                    className=" object-fit "
+                  />
+                </div>
+              </div>
+
+              {/* Desktop */}
+              <div className="hidden lg:w-full mx-5 gap-10 lg:grid lg:grid-cols-3 xl:hidden">
+                <div className="w-full flex items-center justify-center ">
+                  <img
+                    src={image}
+                    alt="community partner"
+                    className=" object-fit"
+                  />
+                </div>
+                <div className="w-full flex items-center justify-center ">
+                  <img
+                    src={image}
+                    alt="community partner"
+                    className=" object-fit "
+                  />
+                </div>
+                <div className="w-full flex items-center justify-center ">
+                  <img
+                    src={image}
+                    alt="community partner"
+                    className=" object-fit "
+                  />
+                </div>
+              </div>
+              {/* Large Desktop */}
+              <div className="hidden xl:w-full mx-5 gap-10 xl:grid xl:grid-cols-4 ">
+                <div className="w-full flex items-center justify-center ">
+                  <img
+                    src={image}
+                    alt="community partner"
+                    className=" object-fit"
+                  />
+                </div>
+                <div className="w-full flex items-center justify-center ">
+                  <img
+                    src={image}
+                    alt="community partner"
+                    className=" object-fit "
+                  />
+                </div>
+                <div className="w-full flex items-center justify-center ">
+                  <img
+                    src={image}
+                    alt="community partner"
+                    className=" object-fit "
+                  />
+                </div>
+                <div className="w-full flex items-center justify-center ">
+                  <img
+                    src={image}
+                    alt="community partner"
+                    className=" object-fit "
+                  />
+                </div>
+              </div>
+            </div>
           ))}
       </div>
       <div className="flex items-center mt-3 absolute inset-x-0 bottom-9  justify-center gap-3">
         {CommunityPartnersImages.map((num, i) => (
           <div
-            onClick={() => setCurrent(i)}
+            onClick={() => setCurrentIndex(i)}
             key={i * 100}
             className={`cursor-pointer w-2 h-2 md:w-[0.6rem] md:h-[0.6rem] transition-all  duration-[800ms] rounded-full bg-gray-400/60 ${
-              i === current && 'bg-gray-50'
+              i === currentIndex && 'bg-gray-50'
             }`}></div>
         ))}
       </div>

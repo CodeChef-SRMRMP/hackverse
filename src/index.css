@@ -1,18 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 @layer components {
   .navButton {
     @apply text-black font-bold font-koulen text-2xl dark:text-white cursor-pointer;
   }
-
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
