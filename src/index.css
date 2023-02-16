@@ -4,8 +4,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer components {
   .navButton {
     @apply text-black font-bold font-koulen text-2xl dark:text-white cursor-pointer;
   }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
 }
