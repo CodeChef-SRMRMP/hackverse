@@ -1,8 +1,9 @@
 import { ConfigProvider, theme } from 'antd';
 import { useTheme } from './context/useTheme';
-import Header from './Components/Header';
-import SponsorsCard from './Components/SponsorsCard';
-import CommunityPartnerCard from './Components/CommunityPartnerCard';
+import Header from './components/Header';
+import SponsorsCard from './components/SponsorsCard';
+import CommunityPartnerCard from './components/CommunityPartnerCard';
+import Carousel from './components/InfiniteScroll';
 
 const App = () => {
   const { darkMode } = useTheme();
@@ -15,6 +16,7 @@ const App = () => {
         <Header />
         <SponsorsCard />
         <CommunityPartnerCard />
+        {/* <Carousel /> */}
       </div>
     </ConfigProvider>
   );
