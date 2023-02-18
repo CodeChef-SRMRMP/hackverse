@@ -1,5 +1,4 @@
 import Slider from 'infinite-react-carousel';
-import './CommunityPartnerCard.css';
 import GDSC from '../assets/gdsc.png';
 import Kanalabs from '../assets/kanalabs.png';
 import Koii from '../assets/koii.png';
@@ -14,7 +13,7 @@ const CommunityPartnerCard = () => {
 
       {/* Mobile */}
       <div className="sm:hidden">
-        <Slider dots={true} autoplay={false} arrows={false}>
+        <Slider dots={true} autoplay={true} arrows={false}>
           <div className="h-40  w-[420px] bg-[#202021] rounded-xl pb-7">
             <div className="flex  w-full h-full items-center justify-center">
               <img src={GDSC} alt={'GDSC'} className=" w-3/5   " />
@@ -40,7 +39,7 @@ const CommunityPartnerCard = () => {
 
       {/* Tablet */}
       <div className="hidden sm:block lg:hidden">
-        <Slider dots={true} autoplay={false} arrows={false}>
+        <Slider autoplaySpeed={4000} dots={true} autoplay={true} arrows={false}>
           <div className="h-[11rem] bg-[#202021] rounded-xl pb-7">
             <div className="flex h-full  w-full  items-center justify-around">
               <img src={GDSC} alt={'GDSC'} className=" w-1/2 px-10" />
@@ -58,7 +57,7 @@ const CommunityPartnerCard = () => {
 
       {/* Desktop */}
       <div className="hidden lg:block xl:hidden">
-        <Slider dots={true} autoplay={false} arrows={false}>
+        <Slider autoplaySpeed={4000} dots={true} autoplay={true} arrows={false}>
           <div className="h-[12rem]  bg-[#202021] rounded-xl pb-7">
             <div className="flex h-full  w-full  items-center justify-around">
               <img src={GDSC} alt={'GDSC'} className=" w-1/3 px-5" />
@@ -78,7 +77,7 @@ const CommunityPartnerCard = () => {
 
       {/* Large Desktop */}
       <div className="hidden  xl:block">
-        <Slider dots={true} autoplay={false} arrows={false}>
+        <Slider autoplaySpeed={5000} dots={true} autoplay={true} arrows={false}>
           <div className="h-[13rem]  bg-[#202021] rounded-xl pb-7">
             <div className="flex h-full  w-full  items-center justify-around">
               <img src={GDSC} alt={'GDSC'} className=" w-1/4 px-10" />
