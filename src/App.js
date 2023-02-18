@@ -3,7 +3,6 @@ import { useTheme } from './context/useTheme';
 import Header from './components/Header';
 import SponsorsCard from './components/SponsorsCard';
 import CommunityPartnerCard from './components/CommunityPartnerCard';
-import Carousel from './components/InfiniteScroll';
 
 const App = () => {
   const { darkMode } = useTheme();
@@ -16,7 +15,6 @@ const App = () => {
         <Header />
         <SponsorsCard />
         <CommunityPartnerCard />
-        {/* <Carousel /> */}
       </div>
     </ConfigProvider>
   );

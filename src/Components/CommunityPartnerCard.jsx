@@ -1,175 +1,101 @@
-import React, { useState, useEffect, useRef } from 'react';
+import Slider from 'infinite-react-carousel';
+import './CommunityPartnerCard.css';
 import GDSC from '../assets/gdsc.png';
 import Kanalabs from '../assets/kanalabs.png';
 import Koii from '../assets/koii.png';
-
-const CommunityPartnersImages = [
-  {
-    id: 1,
-    image: GDSC,
-  },
-  {
-    id: 2,
-    image: Kanalabs,
-  },
-  {
-    id: 3,
-    image: Koii,
-  },
-];
+import DigitalOcean from '../sampleAssets/1.png';
 
 const CommunityPartnerCard = () => {
-  const images = CommunityPartnersImages;
-  const windowWidth = window.innerWidth;
-  const numberOfSlides =
-    windowWidth < 768 ? 1 : windowWidth < 1024 ? 2 : windowWidth < 1280 ? 3 : 4;
-  const interval = 5000;
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const slideRef = useRef(null);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
-      );
-    }, interval);
-
-    return () => clearInterval(timer);
-  }, [images.length, interval]);
-
-  useEffect(() => {
-    slideRef.current.style.transition = 'transform 0.5s ease-out';
-    slideRef.current.style.transform = `translateX(-${currentIndex * 100}%)`;
-  }, [currentIndex]);
-
-  useEffect(() => {
-    const handleTransitionEnd = () => {
-      if (currentIndex === images.length) {
-        setCurrentIndex(0);
-        slideRef.current.style.transition = 'none';
-        slideRef.current.style.transform = `translateX(0)`;
-      }
-    };
-
-    slideRef.current.addEventListener('transitionend', handleTransitionEnd);
-
-    return () =>
-      slideRef.current.removeEventListener(
-        'transitionend',
-        handleTransitionEnd
-      );
-  }, [currentIndex, images.length]);
-
   return (
-    <div className="w-screen relative  overflow-hidden px-5 md:px-10 lg:px-20">
-      <h1 className="text-black text-center dark:text-white  font-bold text-3xl font-koulen mt-10 ">
+    <div className="w-screen overflow-hidden ">
+      <h1 className="text-black text-center dark:text-white  font-bold text-3xl font-koulen mt-10 mb-5 ">
         Community Partners
       </h1>
-      <div
-        ref={slideRef}
-        className="flex py-5  scrollbar-hide duration-200 transition-all max-w-screen ">
-        {CommunityPartnersImages &&
-          CommunityPartnersImages.map(({ image }, i) => (
-            <div
-              key={i}
-              alt={`slide-${i}`}
-              className={`bg-[#202021] backdrop-blur-xl transition-all   duration-[1000ms] flex items-center justify-center gap-5 flex-shrink-0 w-full rounded-lg h-[12rem] px-10 md:h-[13rem]  lg:h-[15rem] opacity-0 ${
-                currentIndex === i && 'opacity-100'
-              }`}>
-              {/* Mobile */}
-              <div className="md:hidden flex items-center justify-center ">
-                <img
-                  src={image}
-                  alt="community partner"
-                  className="w-[100%] h-[100%] object-fit"
-                />
-              </div>
-              {/* Tablet */}
 
-              <div className="hidden md:w-full mx-5 gap-10 md:grid md:grid-cols-2 lg:hidden">
-                <div className="w-full flex items-center justify-center ">
-                  <img
-                    src={image}
-                    alt="community partner"
-                    className=" object-fit"
-                  />
-                </div>
-                <div className="w-full flex items-center justify-center ">
-                  <img
-                    src={image}
-                    alt="community partner"
-                    className=" object-fit "
-                  />
-                </div>
-              </div>
-
-              {/* Desktop */}
-              <div className="hidden lg:w-full mx-5 gap-10 lg:grid lg:grid-cols-3 xl:hidden">
-                <div className="w-full flex items-center justify-center ">
-                  <img
-                    src={image}
-                    alt="community partner"
-                    className=" object-fit"
-                  />
-                </div>
-                <div className="w-full flex items-center justify-center ">
-                  <img
-                    src={image}
-                    alt="community partner"
-                    className=" object-fit "
-                  />
-                </div>
-                <div className="w-full flex items-center justify-center ">
-                  <img
-                    src={image}
-                    alt="community partner"
-                    className=" object-fit "
-                  />
-                </div>
-              </div>
-              {/* Large Desktop */}
-              <div className="hidden xl:w-full mx-5 gap-10 xl:grid xl:grid-cols-4 ">
-                <div className="w-full flex items-center justify-center ">
-                  <img
-                    src={image}
-                    alt="community partner"
-                    className=" object-fit"
-                  />
-                </div>
-                <div className="w-full flex items-center justify-center ">
-                  <img
-                    src={image}
-                    alt="community partner"
-                    className=" object-fit "
-                  />
-                </div>
-                <div className="w-full flex items-center justify-center ">
-                  <img
-                    src={image}
-                    alt="community partner"
-                    className=" object-fit "
-                  />
-                </div>
-                <div className="w-full flex items-center justify-center ">
-                  <img
-                    src={image}
-                    alt="community partner"
-                    className=" object-fit "
-                  />
-                </div>
-              </div>
+      {/* Mobile */}
+      <div className="sm:hidden">
+        <Slider dots={true} autoplay={false} arrows={false}>
+          <div className="h-40  w-[420px] bg-[#202021] rounded-xl pb-7">
+            <div className="flex  w-full h-full items-center justify-center">
+              <img src={GDSC} alt={'GDSC'} className=" w-3/5   " />
             </div>
-          ))}
+          </div>
+          <div className="h-40  w-screen bg-[#202021] rounded-xl pb-7 ">
+            <div className="flex w-full h-full items-center justify-center">
+              <img src={Koii} alt={'GDSC'} className=" w-3/5 " />
+            </div>
+          </div>
+          <div className="h-40  w-screen bg-[#202021] rounded-xl pb-7 ">
+            <div className="flex w-full h-full items-center justify-center">
+              <img src={DigitalOcean} alt={'GDSC'} className=" w-3/5 " />
+            </div>
+          </div>
+          <div className="h-40  w-screen bg-[#202021]  rounded-xl pb-7 ">
+            <div className="flex w-full h-full items-center justify-center">
+              <img src={Kanalabs} alt={'GDSC'} className=" w-3/5 " />
+            </div>
+          </div>
+        </Slider>
       </div>
-      <div className="flex items-center mt-3 absolute inset-x-0 bottom-9  justify-center gap-3">
-        {CommunityPartnersImages.map((num, i) => (
-          <div
-            onClick={() => setCurrentIndex(i)}
-            key={i * 100}
-            className={`cursor-pointer w-2 h-2 md:w-[0.6rem] md:h-[0.6rem] transition-all  duration-[800ms] rounded-full bg-gray-400/60 ${
-              i === currentIndex && 'bg-gray-50'
-            }`}></div>
-        ))}
+
+      {/* Tablet */}
+      <div className="hidden sm:block lg:hidden">
+        <Slider dots={true} autoplay={false} arrows={false}>
+          <div className="h-[11rem] bg-[#202021] rounded-xl pb-7">
+            <div className="flex h-full  w-full  items-center justify-around">
+              <img src={GDSC} alt={'GDSC'} className=" w-1/2 px-10" />
+              <img src={Kanalabs} alt={'GDSC'} className=" w-1/2 px-10" />
+            </div>
+          </div>
+          <div className="h-[11rem]  bg-[#202021] rounded-xl pb-7">
+            <div className="flex h-full  w-full  items-center justify-around">
+              <img src={DigitalOcean} alt={'GDSC'} className=" w-[45%] px-10" />
+              <img src={Koii} alt={'GDSC'} className=" w-2/5 px-10" />
+            </div>
+          </div>
+        </Slider>
+      </div>
+
+      {/* Desktop */}
+      <div className="hidden lg:block xl:hidden">
+        <Slider dots={true} autoplay={false} arrows={false}>
+          <div className="h-[12rem]  bg-[#202021] rounded-xl pb-7">
+            <div className="flex h-full  w-full  items-center justify-around">
+              <img src={GDSC} alt={'GDSC'} className=" w-1/3 px-5" />
+              <img src={Kanalabs} alt={'GDSC'} className=" w-1/3 px-5" />
+              <img src={DigitalOcean} alt={'GDSC'} className=" w-1/3 px-5" />
+            </div>
+          </div>
+          <div className="h-[12rem]  bg-[#202021] rounded-xl pb-7">
+            <div className="flex h-full  w-full  items-center justify-around">
+              <img src={DigitalOcean} alt={'GDSC'} className=" w-1/3 px-5" />
+              <img src={Koii} alt={'GDSC'} className=" w-2/8 px-5" />
+              <img src={Kanalabs} alt={'GDSC'} className=" w-1/3 px-5" />
+            </div>
+          </div>
+        </Slider>
+      </div>
+
+      {/* Large Desktop */}
+      <div className="hidden  xl:block">
+        <Slider dots={true} autoplay={false} arrows={false}>
+          <div className="h-[13rem]  bg-[#202021] rounded-xl pb-7">
+            <div className="flex h-full  w-full  items-center justify-around">
+              <img src={GDSC} alt={'GDSC'} className=" w-1/4 px-10" />
+              <img src={Kanalabs} alt={'GDSC'} className=" w-1/4 px-10" />
+              <img src={Kanalabs} alt={'GDSC'} className=" w-1/4 px-10" />
+              <img src={DigitalOcean} alt={'GDSC'} className=" w-1/4 px-10" />
+            </div>
+          </div>
+          <div className="h-[13rem]   bg-[#202021] rounded-xl pb-7">
+            <div className="flex h-full  w-full  items-center justify-around">
+              <img src={DigitalOcean} alt={'GDSC'} className=" w-1/4 px-10" />
+              <img src={GDSC} alt={'GDSC'} className=" w-1/4 px-10" />
+              <img src={Kanalabs} alt={'GDSC'} className=" w-1/4 px-10" />
+              <img src={Koii} alt={'GDSC'} className=" w-1/4 px-10" />
+            </div>
+          </div>
+        </Slider>
       </div>
     </div>
   );
