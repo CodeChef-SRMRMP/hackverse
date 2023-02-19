@@ -32,11 +32,17 @@ const Footer = () => {
               rel="noreferrer">
               <FaLinkedin className="text-[2rem]" />
             </a>
-            <a href="#" target="_blank" rel="noreferrer">
+            <a
+              href="https://twitter.com/CodeChefSrmRmp"
+              target="_blank"
+              rel="noreferrer">
               <FaGithubSquare className="text-[2rem]" />
             </a>
 
-            <a href="#" target="_blank" rel="noreferrer">
+            <a
+              href="https://twitter.com/CodeChefSrmRmp"
+              target="_blank"
+              rel="noreferrer">
               <FaTwitterSquare className="text-[2rem]" />
             </a>
           </div>
@@ -53,7 +59,7 @@ const Footer = () => {
       <div className="lg:flex lg:justify-between lg:items-center">
         <div className="grid grid-cols-10 shadow-xs  mt-5 py-6 px-4 space-x-3 rounded-lg w-full lg:max-w-lg bg-[#00020c]">
           <div className="col-span-3 sm:col-span-2 lg:col-span-2 md:col-span-1">
-            <img src={CodeChef} />
+            <img src={CodeChef} alt="logo" />
           </div>
           <div className="col-span-7 sm:col-span-8 md:col-span-9 lg:col-span-8">
             <h1 className="text-white text-xl mb-3">About CodeChef SRM RMP </h1>
@@ -70,28 +76,28 @@ const Footer = () => {
         {/* Tearms and Conditons */}
         <div className="mt-8 flex flex-wrap  lg:flex-col gap-5 lg:gap-3 lg:items-end justify-center lg:justify-start text-gray-300 transition-all duration-200 ">
           <a
-            href="#"
+            href="https://twitter.com/CodeChefSrmRmp"
             target="_blank"
             rel="noreferrer"
             className="hover:text-[#A9A9A9] text-[0.9rem] lg:text-lg">
             SRM RMP Code of Conduct
           </a>
           <a
-            href="#"
+            href="https://twitter.com/CodeChefSrmRmp"
             target="_blank"
             rel="noreferrer"
             className="hover:text-[#A9A9A9] text-[0.9rem] lg:text-lg">
             Terms and Conditions
           </a>
           <a
-            href="#"
+            href="https://twitter.com/CodeChefSrmRmp"
             target="_blank"
             rel="noreferrer"
             className="hover:text-[#A9A9A9] text-[0.9rem] lg:text-lg ">
             Privacy Policy
           </a>
           <a
-            href="#"
+            href="https://twitter.com/CodeChefSrmRmp"
             target="_blank"
             rel="noreferrer"
             className="hover:text-[#A9A9A9] text-[0.9rem] lg:text-lg">
@@ -107,8 +113,8 @@ const Footer = () => {
           CodeChefSRM RMP Team
         </p>
         <div>
-          <a className="#" href="#" rel="noreferrer">
-            <img src={CodeChef} className="h-12 w-12" />
+          <a href="https://twitter.com/CodeChefSrmRmp" rel="noreferrer">
+            <img src={CodeChef} alt="logo" className="h-12 w-12" />
           </a>
         </div>
       </div>
