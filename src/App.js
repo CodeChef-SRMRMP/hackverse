@@ -6,6 +6,7 @@ import Landing from './components/Landing';
 import CommunityPartnerCard from './components/CommunityPartnerCard';
 import WhySponsorUs from './components/WhySponsorUs';
 import { useEffect, useState } from 'react';
+import SessionLayout from './components/SessionLayout';
 
 const App = () => {
   const { darkMode } = useTheme();
@@ -20,6 +21,7 @@ const App = () => {
         <Landing />
         <SponsorsCard />
         <WhySponsorUs />
+        <SessionLayout />
         <CommunityPartnerCard />
       </div>
     </ConfigProvider>
