@@ -23,6 +23,7 @@ const WhySponsorUs = () => {
         <div className="ml-2 space-x-2">
           <button className="bg-gray-500 px-4 py-2 rounded-lg active:scale-75 ease-out duration-100">
             <a
+              rel="noreferrer"
               href={
                 'https://twitter.com/messages/compose?recipient_id=1355157967650217991&text=' +
                 message
