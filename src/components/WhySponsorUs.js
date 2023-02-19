@@ -28,7 +28,7 @@ const WhySponsorUs = () => {
         </div>
       </div>
       <div className="w-full lg:w-1/2 bg-[#202021]/80 backdrop-blur-3xl rounded-lg p-5">
-        <h1 className="text-right">Registrations</h1>
+        <h1 className="text-xl">Our Previous Events</h1>
       </div>
     </div>
   );
