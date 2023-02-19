@@ -1,5 +1,5 @@
-import React from "react";
-import Marquee from "react-fast-marquee";
+import React from 'react';
+import Marquee from 'react-fast-marquee';
 
 const SponsorsCard = () => {
   return (
@@ -12,52 +12,52 @@ const SponsorsCard = () => {
           <div className="flex items-center space-x-20 mx-10">
             <img
               className="w-32"
-              src={require("../sampleAssets/1.png")}
+              src={require('../sampleAssets/1.png')}
               alt=""
             />
             <img
               className="w-32"
-              src={require("../sampleAssets/2.png")}
+              src={require('../sampleAssets/2.png')}
               alt=""
             />
             <img
               className="w-32"
-              src={require("../sampleAssets/2.png")}
+              src={require('../sampleAssets/2.png')}
               alt=""
             />
             <img
               className="w-32"
-              src={require("../sampleAssets/2.png")}
+              src={require('../sampleAssets/2.png')}
               alt=""
             />
             <img
               className="w-32"
-              src={require("../sampleAssets/3.png")}
+              src={require('../sampleAssets/3.png')}
               alt=""
             />
             <img
               className="w-32"
-              src={require("../sampleAssets/4.png")}
+              src={require('../sampleAssets/4.png')}
               alt=""
             />
             <img
               className="w-32"
-              src={require("../sampleAssets/4.png")}
+              src={require('../sampleAssets/4.png')}
               alt=""
             />
             <img
               className="w-32"
-              src={require("../sampleAssets/4.png")}
+              src={require('../sampleAssets/4.png')}
               alt=""
             />
             <img
               className="w-32"
-              src={require("../sampleAssets/5.png")}
+              src={require('../sampleAssets/5.png')}
               alt=""
             />
             <img
               className="w-32"
-              src={require("../sampleAssets/5.png")}
+              src={require('../sampleAssets/5.png')}
               alt=""
             />
           </div>

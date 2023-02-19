@@ -57,7 +57,7 @@ const Header = () => {
           })}
         </div>
       </Drawer>
-      <div className="flex bg-white justify-between border-b duration-1000 transition-all ease-out p-3 px-10 items-center dark:bg-black">
+      <div className="flex bg-white justify-between border-b duration-1000 transition-all ease-out p-1 px-10 items-center dark:bg-black">
         <h1 className="navButton text-3xl">
           {darkMode ? (
             <img
