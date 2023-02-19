@@ -1,10 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
   font-family: "Koulen", sans-serif;
 }
 
@@ -41,6 +46,7 @@ svg text {
     stroke-dasharray: 50% 0;
     stroke-width: 3;
   }
+
 }
 
 @layer components {
@@ -51,4 +57,36 @@ svg text {
   body {
     @apply bg-gray-200 dark:bg-black;
   }
+}
+
+.carousel-item {
+  @apply px-[1.25rem] sm:px-[1.5rem] md:px-[2rem] lg:px-[4.5rem] opacity-0 transition-opacity duration-[1s] delay-100 ease-in-out !important;
+}
+
+.active {
+  @apply opacity-100  !important;
+}
+
+.carousel-dots {
+  @apply block w-full p-0 relative top-[-4rem] z-10 list-none text-center !important;
+}
+
+.carousel-initialized {
+  @apply overflow-hidden relative !important;
+}
+
+.carousel-dots li {
+  @apply relative inline-block w-5 h-5 mx-1 p-0  cursor-pointer !important;
+}
+
+.carousel-dots li button:before {
+  @apply font-bold text-2xl absolute top-0 left-0 !important;
+}
+
+.carousel-dots li button:before {
+  @apply text-[38px] leading-5 absolute top-0 left-0 content-['•'] opacity-25 text-white !important;
+}
+
+.carousel-dots li.carousel-dots-active button:before {
+  @apply opacity-75 text-white !important;
 }

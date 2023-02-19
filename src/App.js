@@ -3,6 +3,8 @@ import { ConfigProvider, theme } from "antd";
 import { useTheme } from "./context/useTheme";
 import SponsorsCard from "./components/SponsorsCard";
 import Landing from "./components/Landing";
+import SponsorsCard from './components/SponsorsCard';
+
 
 const App = () => {
   const { darkMode } = useTheme();
@@ -15,7 +17,9 @@ const App = () => {
       <Header />
       <div className="bg-gray-200 dark:bg-black min-h-screen w-full">
         <Landing />
+
         <SponsorsCard />
+        <CommunityPartnerCard />
       </div>
     </ConfigProvider>
   );
