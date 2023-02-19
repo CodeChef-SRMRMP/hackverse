@@ -29,7 +29,7 @@ const SessionLayout = () => {
   return (
     <div className="m-10 mx-5 md:mx-10 lg:mx-20 space-y-5">
       <h1 className="text-4xl text-white">Session Layout</h1>
-      <div className="bg-black/60 backdrop-blur-3xl p-5 lg:space-x-10 rounded-lg text-white flex flex-col lg:flex-row justify-evenly">
+      <div className="bg-black/60 backdrop-blur-3xl p-5 lg:space-x-10 lg:space-y-0 rounded-lg text-white flex flex-col lg:flex-row justify-evenly">
         {contents?.map((content, index) => {
           return <SessionCard key={index} id={index} {...content} />;
         })}
@@ -52,7 +52,7 @@ const SessionCard = ({ title, description, round, id }) => {
         </div>
         <p className="text-xs ml-1">{description}</p>
       </div>
-      <div className="lg:hidden space-y-3 mb-[5rem]">
+      <div className="lg:hidden space-y-3 my-10">
         <div className="p-3 bg-[#303030] rounded-lg">
           <p className="text-[#A9A9A9] text-sm">Round {round}</p>
           <h1 className="text-4xl">{title}</h1>
