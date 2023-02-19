@@ -8,6 +8,7 @@ import WhySponsorUs from './components/WhySponsorUs';
 import SessionLayout from './components/SessionLayout';
 import { useParams } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
+import PrizeSection from './components/PrizeSection';
 
 const App = () => {
   const { darkMode } = useTheme();
@@ -39,6 +40,7 @@ const App = () => {
         <Landing />
         <SponsorsCard />
         <WhySponsorUs />
+        <PrizeSection />
         <SessionLayout sessionRef={sectionRefs.sessions} />
         <CommunityPartnerCard />
       </div>

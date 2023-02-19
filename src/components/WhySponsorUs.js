@@ -7,10 +7,10 @@ const WhySponsorUs = () => {
         <h1 className="text-black dark:text-white ml-1 font-bold text-6xl">
           WHY SPONSOR US
         </h1>
-        <h3 className="ml-2 text-gray-500 text-xl">
+        <h3 className="ml-2 text-gray-200 text-xl">
           HELP US MAKE HACKVERSE BIGGER AND BETTER
         </h3>
-        <p className="ml-2 text-sm text-gray-400">
+        <p className="ml-2 text-sm text-gray-300">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
           nibh nulla, vulputate fringilla tempor vitae, eleifend eu risus. Ut
           interdum eget nisi non volutpat. Vivamus nec dui quis metus commodo
