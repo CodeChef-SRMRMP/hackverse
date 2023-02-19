@@ -5,9 +5,11 @@ import SponsorsCard from './components/SponsorsCard';
 import Landing from './components/Landing';
 import CommunityPartnerCard from './components/CommunityPartnerCard';
 import WhySponsorUs from './components/WhySponsorUs';
+import { useEffect, useState } from 'react';
 
 const App = () => {
   const { darkMode } = useTheme();
+
   return (
     <ConfigProvider
       theme={{

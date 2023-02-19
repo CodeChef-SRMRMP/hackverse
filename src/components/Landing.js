@@ -1,8 +1,12 @@
 import React from 'react';
+import { useTheme } from '../context/useTheme';
 const Landing = () => {
+  const { scrollPosition } = useTheme();
   return (
     <div className="text-center hero-bg overflow-hidden justify-center min-h-[calc(100vh_-_100px)] items-center flex flex-col lg:gap-0 gap-4">
-      <h1 className="bg-gradient-to-r bg-clip-text text-transparent lg:text-4xl font-bold from-slate-200 to-slate-400 text-xl md:text-2xl">
+      <h1
+        style={{ transform: `translateX(${scrollPosition * 2}px)` }}
+        className="bg-gradient-to-r bg-clip-text text-transparent lg:text-4xl font-bold from-slate-200 to-slate-400 text-xl md:text-2xl">
         A HACKATHON LIKE NEVER BEFORE
       </h1>
       <svg viewBox="0 0 1000 200">
@@ -17,7 +21,9 @@ const Landing = () => {
           HACK VERSE
         </text>
       </svg>
-      <h1 className="bg-gradient-to-r bg-clip-text text-transparent lowercase text-gray-300 font-bold lg:text-4xl text-sm md:text-4xl from-slate-200 to-slate-400">
+      <h1
+        style={{ transform: `translateX(-${scrollPosition * 2}px)` }}
+        className="bg-gradient-to-r bg-clip-text text-transparent lowercase text-gray-300 font-bold lg:text-4xl text-sm md:text-4xl from-slate-200 to-slate-400">
         <span className="text-lg md:text-2xl lg:text-4xl">தமிழ்நாடு</span>
         <span className="text-xs md:text-xl lg:text-2xl">'s</span> Largest Web
         3.0 Hackathon
