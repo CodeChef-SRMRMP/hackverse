@@ -24,9 +24,8 @@ const Landing = () => {
       <h1
         style={{ transform: `translateX(-${scrollPosition * 0.5}px)` }}
         className="bg-gradient-to-r bg-clip-text text-transparent lowercase text-gray-300 font-bold lg:text-4xl text-sm md:text-4xl from-slate-200 to-slate-400">
-        <span className="text-lg md:text-2xl lg:text-4xl">தமிழ்நாடு</span>
-        <span className="text-xs md:text-xl lg:text-2xl">'s</span> Largest Web
-        3.0 Hackathon
+        <span className="text-lg md:text-2xl lg:text-4xl">தமிழ்நாட்டின்</span>{' '}
+        Largest Web 3.0 Hackathon
       </h1>
     </div>
   );

@@ -12,6 +12,10 @@
   font-family: 'Koulen', sans-serif;
 }
 
+.text-stroke-black {
+  -webkit-text-stroke: 1.5px black;
+}
+
 body {
   background-image: url(./assets/images/hero-bg.png);
   background-size: cover;
