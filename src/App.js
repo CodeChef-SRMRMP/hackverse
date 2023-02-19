@@ -13,9 +13,11 @@ const App = () => {
     >
       <div className="bg-white dark:bg-black min-h-screen w-screen">
         <Header />
+        <Landing/>
         <SponsorsCard />
       </div>
     </ConfigProvider>
+
   );
 };
 

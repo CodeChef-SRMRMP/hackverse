@@ -1,11 +1,42 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+svg {
+    font-family: 'Poppins', sans-serif;
+}
+svg text {
+	text-transform: uppercase;
+	animation: stroke 5s infinite alternate;
+	stroke-width: 2;
+	stroke: url(#paint0_linear_3_14);
+	font-size: 140px;
+}
+@keyframes stroke {
+	0%   {
+		fill: transparent; stroke: url(#paint0_linear_3_14);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 3;
+	}
+	70%  {fill: transparent; stroke: url(#paint0_linear_3_14); }
+	80%  {fill: transparent; stroke: url(#paint0_linear_3_14); stroke-width: 3; }
+	100% {
+		fill: transparent; stroke: url(#paint0_linear_3_14); 
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 3;
+	}
+}
 
 @layer components {
   .navButton {
     @apply text-black font-bold font-koulen text-2xl dark:text-white cursor-pointer;
   }
 }
+
