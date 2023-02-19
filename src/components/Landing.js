@@ -45,8 +45,8 @@ const Title = () => {
           x2="585"
           y2="37.0001"
           gradientUnits="userSpaceOnUse">
-          <stop stop-color="#FF1CF7" />
-          <stop offset="1" stop-color="#00F0FF" />
+          <stop stop-color="#000000" />
+          <stop offset="1" stop-color="#FFFFFF" />
         </linearGradient>
       </defs>
     </svg>
