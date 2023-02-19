@@ -7,7 +7,7 @@ const SponsorsCard = () => {
       <p className="text-black dark:text-white ml-5 md:ml-10 lg:ml-20 font-bold text-3xl font-koulen pt-10">
         Sponsorship
       </p>
-      <div className="m-4 rounded-lg bg-[#202021] mx-5 md:mx-10 lg:mx-20 p-5 py-7 text-white dark:text-black dark:shadow-gray-500">
+      <div className="m-4 rounded-lg bg-[#202021]/60 backdrop-blur-3xl mx-5 md:mx-10 lg:mx-20 p-5 py-7 text-white dark:text-black dark:shadow-gray-500">
         <Marquee pauseOnHover gradient={false} speed={200}>
           <div className="flex items-center space-x-20 mx-10">
             <img
