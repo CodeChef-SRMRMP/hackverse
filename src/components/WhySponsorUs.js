@@ -1,6 +1,8 @@
 import React from 'react';
 
 const WhySponsorUs = () => {
+  const message =
+    'Hey Prayasu, We would like to sponsor your event. Please get back to us. Thanks!';
   return (
     <div className="m-10 mx-5 md:mx-10 space-y-10 lg:space-y-0 lg:mx-20 dark:text-white flex flex-col lg:flex-row justify-between items-stretch">
       <div className="w-full lg:w-1/3 space-y-3">
@@ -20,7 +22,14 @@ const WhySponsorUs = () => {
         </p>
         <div className="ml-2 space-x-2">
           <button className="bg-gray-500 px-4 py-2 rounded-lg active:scale-75 ease-out duration-100">
-            Sponsor Us
+            <a
+              href={
+                'https://twitter.com/messages/compose?recipient_id=1355157967650217991&text=' +
+                message
+              }
+              target="_blank">
+              Sponsor Us
+            </a>
           </button>
           <button className="bg-red-500 px-4 py-2 rounded-lg active:scale-75 ease-out duration-100">
             View Brochure
