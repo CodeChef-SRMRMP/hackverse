@@ -27,7 +27,7 @@ const App = () => {
     if (id === undefined) {
       sectionRefs?.headerRef?.current?.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [id]);
+  }, [id, sectionRefs]);
 
   return (
     <ConfigProvider
