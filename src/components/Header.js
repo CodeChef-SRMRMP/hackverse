@@ -4,13 +4,14 @@ import { BsSunFill, BsMoonFill } from 'react-icons/bs';
 import { IoClose } from 'react-icons/io5';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { useTheme } from '../context/useTheme';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ headerRef }) => {
   const { darkMode, setDarkMode } = useTheme();
 
   const [openDrawer, setOpenDrawer] = useState(false);
 
-  const contents = ['SESSIONS', 'SPONSORS', 'JOIN US', 'LEADER BOARD'];
+  const contents = ['SESSIONS', 'SPONSORS', 'JOIN US', 'LEADERBOARD'];
 
   return (
     <>
@@ -51,34 +52,42 @@ const Header = () => {
                 key={key}
                 className="navButton"
                 onClick={() => setOpenDrawer(!openDrawer)}>
-                {content}
+                <Link to={'/' + content.toLocaleLowerCase().split(' ')[0]}>
+                  {content}
+                </Link>
               </p>
             );
           })}
         </div>
       </Drawer>
-      <div className="flex bg-white justify-between border-b duration-1000 transition-all ease-out p-1 px-10 items-center dark:bg-black">
+      <div
+        ref={headerRef}
+        className="flex bg-white justify-between border-b duration-1000 transition-all ease-out p-1 px-10 items-center dark:bg-black">
         <h1 className="navButton text-3xl">
-          {darkMode ? (
-            <img
-              src={require('../assets/images/logo-light.png')}
-              className="h-20"
-              alt=""
-            />
-          ) : (
-            <img
-              src={require('../assets/images/logo-dark.png')}
-              className="h-20"
-              alt=""
-            />
-          )}
+          <Link to="/">
+            {darkMode ? (
+              <img
+                src={require('../assets/images/logo-light.png')}
+                className="h-20"
+                alt=""
+              />
+            ) : (
+              <img
+                src={require('../assets/images/logo-dark.png')}
+                className="h-20"
+                alt=""
+              />
+            )}
+          </Link>
         </h1>
 
         <div className="space-x-5 items-center hidden md:inline-flex">
           {contents.map((content, key) => {
             return (
               <p key={key} className="navButton">
-                {content}
+                <Link to={'/' + content.toLocaleLowerCase().split(' ')[0]}>
+                  {content}
+                </Link>
               </p>
             );
           })}

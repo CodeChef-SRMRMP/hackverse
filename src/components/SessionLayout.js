@@ -1,14 +1,14 @@
 import React, { useRef } from 'react';
 import Xarrow from 'react-xarrows';
 
-const SessionLayout = () => {
+const SessionLayout = ({ sessionRef }) => {
   const card1 = useRef(null);
   const card2 = useRef(null);
   const card3 = useRef(null);
   const card4 = useRef(null);
 
   return (
-    <div className="m-10 mx-5 md:mx-10 lg:mx-20 space-y-5">
+    <div ref={sessionRef} className="m-10 mx-5 md:mx-10 lg:mx-20 space-y-5">
       <h1 className="text-4xl text-white">Session Layout</h1>
       <div className="bg-black/60 backdrop-blur-3xl p-5 lg:space-x-20 rounded-lg text-white flex flex-col gap-y-10 lg:gap-y-0 lg:flex-row justify-evenly">
         <div className="lg:inline-block space-y-3">
