@@ -1,7 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 *{
     font-family: 'Poppins', sans-serif;
@@ -29,3 +33,10 @@ svg text {
 		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 3;
 	}
 }
+
+@layer components {
+  .navButton {
+    @apply text-black font-bold font-koulen text-2xl dark:text-white cursor-pointer;
+  }
+}
+
