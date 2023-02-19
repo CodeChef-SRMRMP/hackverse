@@ -4,7 +4,7 @@ import Marquee from 'react-fast-marquee';
 const CommunityPartnerCard = () => {
   return (
     <>
-      <p className="text-black dark:text-white ml-5 md:ml-10 lg:ml-20 text-center font-bold text-3xl font-koulen pt-10">
+      <p className="text-black dark:text-white ml-5 md:ml-10 lg:ml-20 text-center font-bold text-3xl pt-10">
         Community Partners
       </p>
       <div className="m-4 rounded-lg bg-[#202021]/60 backdrop-blur-3xl mx-5 md:mx-10 lg:mx-20 p-5 py-7 text-white dark:text-black dark:shadow-gray-500">

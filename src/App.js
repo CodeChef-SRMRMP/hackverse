@@ -4,6 +4,7 @@ import { useTheme } from './context/useTheme';
 import SponsorsCard from './components/SponsorsCard';
 import Landing from './components/Landing';
 import CommunityPartnerCard from './components/CommunityPartnerCard';
+import WhySponsorUs from './components/WhySponsorUs';
 
 const App = () => {
   const { darkMode } = useTheme();
@@ -15,8 +16,8 @@ const App = () => {
       <Header />
       <div className=" min-h-screen w-full">
         <Landing />
-
         <SponsorsCard />
+        <WhySponsorUs />
         <CommunityPartnerCard />
       </div>
     </ConfigProvider>
