@@ -4,7 +4,7 @@ const PrizeSection = () => {
   return (
     <div className="m-10 mx-5 md:mx-10 lg:mx-20">
       <h1 className="dark:text-white text-5xl">Prizes</h1>
-      <div className="bg-black/60 mt-5 flex flex-wrap gap-5 items-end justify-between px-20 backdrop-blur-xl rounded-md text-white p-10">
+      <div className="bg-black/60 mt-5 flex flex-wrap gap-5 items-end justify-between px-10 lg:px-20 backdrop-blur-xl rounded-md text-white p-10">
         <div className="flex justify-between w-full md:w-fit items-center md:items-start space-x-5 lg:space-x-0 md:flex-col">
           <div className="-space-y-3 ">
             <p className="text-6xl">
@@ -65,7 +65,7 @@ const PrizeSection = () => {
         <div className="flex items-center justify-between w-full md:w-fit md:items-start space-x-5 lg:space-x-0 md:flex-col">
           <div className="-space-y-2">
             <p className="text-2xl">+ Sponsor</p>
-            <p className="text-2xl">Track Prize</p>
+            <p className="text-2xl">Track</p>
           </div>
           <div className=" animate-pulse relative w-fit flex items-center justify-center">
             <img
@@ -74,7 +74,9 @@ const PrizeSection = () => {
               alt=""
             />
             <div className="absolute -space-y-3 drop-shadow-xl">
-              <p className="text-7xl font-semibold">100k</p>
+              <p className="text-3xl md:text-5xl lg:text-7xl font-semibold">
+                100k
+              </p>
               <p className="text-2xl">INR</p>
             </div>
           </div>
