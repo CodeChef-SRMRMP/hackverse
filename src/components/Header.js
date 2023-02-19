@@ -59,8 +59,22 @@ const Header = () => {
           })}
         </div>
       </Drawer>
-      <div className="flex bg-white justify-between duration-1000 transition-all ease-out p-3 px-10 items-center dark:bg-black">
-        <h1 className="navButton text-3xl">HACK VERSE</h1>
+      <div className="flex bg-white justify-between border-b duration-1000 transition-all ease-out p-3 px-10 items-center dark:bg-gray-900">
+        <h1 className="navButton text-3xl">
+          {darkMode ? (
+            <img
+              src={require("../assets/images/logo-light.png")}
+              className="h-20"
+              alt=""
+            />
+          ) : (
+            <img
+              src={require("../assets/images/logo-dark.png")}
+              className="h-20"
+              alt=""
+            />
+          )}
+        </h1>
 
         <div className="space-x-5 items-center hidden md:inline-flex">
           {contents.map((content, key) => {
