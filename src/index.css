@@ -5,16 +5,19 @@
 @tailwind utilities;
 
 * {
-
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 
-  font-family: "Koulen", sans-serif;
+  font-family: 'Koulen', sans-serif;
+}
+
+body {
+  background-image: url(./assets/images/hero-bg.png);
 }
 
 svg {
-  font-family: "Koulen", sans-serif;
+  font-family: 'Koulen', sans-serif;
 }
 svg text {
   text-transform: uppercase;
@@ -46,16 +49,11 @@ svg text {
     stroke-dasharray: 50% 0;
     stroke-width: 3;
   }
-
 }
 
 @layer components {
   .navButton {
     @apply text-black font-bold font-koulen text-2xl dark:text-white cursor-pointer;
-  }
-
-  body {
-    @apply bg-gray-200 dark:bg-black;
   }
 }
 
