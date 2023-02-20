@@ -8,6 +8,7 @@ import WhySponsorUs from './components/WhySponsorUs';
 import SessionLayout from './components/SessionLayout';
 import { useParams } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
+import Footer from './components/Footer';
 import PrizeSection from './components/PrizeSection';
 
 const App = () => {
@@ -43,6 +44,7 @@ const App = () => {
         <PrizeSection />
         <SessionLayout sessionRef={sectionRefs.sessions} />
         <CommunityPartnerCard />
+        <Footer />
       </div>
     </ConfigProvider>
   );
