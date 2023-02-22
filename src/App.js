@@ -10,6 +10,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import Footer from './components/Footer';
 import PrizeSection from './components/PrizeSection';
+import Tracks from './components/Tracks';
 
 const App = () => {
   const { darkMode } = useTheme();
@@ -41,6 +42,7 @@ const App = () => {
         <Landing />
         <SponsorsCard />
         <WhySponsorUs />
+        <Tracks />
         <PrizeSection />
         <SessionLayout sessionRef={sectionRefs.sessions} />
         <CommunityPartnerCard />
