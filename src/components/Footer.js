@@ -1,6 +1,5 @@
 import React from 'react';
-import Logo from '../assets/images/HV.ico';
-import CodeChef from '../sampleAssets/codechef.png';
+
 import {
   FaGithubSquare,
   FaInstagram,
@@ -16,7 +15,11 @@ const Footer = () => {
       <div className="flex items-center justify-between">
         {/* HackVerse Logo */}
         <div className="hidden sm:block cursor-pointer">
-          <img src={Logo} alt="Logo" className="w-12 h-12" />
+          <img
+            src={require('../assets/images/HV.ico')}
+            alt="Logo"
+            className="w-12 h-12"
+          />
         </div>
         <div className="text-[#A9A9A9] w-full flex-col flex space-y-3">
           <div className="flex sm:gap-8 justify-around sm:justify-end">
@@ -59,7 +62,10 @@ const Footer = () => {
       <div className="lg:flex lg:justify-between lg:items-center">
         <div className="flex shadow-xs  mt-5 py-6 px-4 space-x-3 rounded-lg w-full   lg:max-w-md xl:max-w-lg bg-[#00020c]">
           <div className="w-[5rem] flex-shrink-0 flex-grow-0 ">
-            <img src={CodeChef} alt="logo" />
+            <img
+              src={require('../assets/images/codechef-logo.png')}
+              alt="logo"
+            />
           </div>
           <div className="">
             <h1 className="text-white text-xl mb-3">About CodeChef SRM RMP </h1>
@@ -113,7 +119,11 @@ const Footer = () => {
         </p>
         <div>
           <a href="https://twitter.com/CodeChefSrmRmp" rel="noreferrer">
-            <img src={CodeChef} alt="logo" className="h-12 w-12" />
+            <img
+              src={require('../assets/images/codechef-logo.png')}
+              alt="logo"
+              className="h-20 object-contain"
+            />
           </a>
         </div>
       </div>
