@@ -32,9 +32,14 @@ const WhySponsorUs = () => {
               Sponsor Us
             </a>
           </button>
-          <button className="bg-red-500 px-4 py-2 rounded-lg active:scale-75 ease-out duration-100">
-            View Brochure
-          </button>
+          <a
+            href={require('../assets/SponsorDeck.pdf')}
+            target="_blank"
+            rel="noreferrer">
+            <button className="bg-red-500 px-4 py-2 rounded-lg active:scale-75 ease-out duration-100">
+              View Brochure
+            </button>
+          </a>
         </div>
       </div>
       <div className="w-full lg:w-1/2 bg-[#202021]/50 backdrop-blur-3xl rounded-lg p-5">
