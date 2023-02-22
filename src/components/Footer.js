@@ -15,7 +15,7 @@ const Footer = () => {
       {/* Social Media */}
       <div className="flex items-center justify-between">
         {/* HackVerse Logo */}
-        <div className="hidden sm:block">
+        <div className="hidden sm:block cursor-pointer">
           <img src={Logo} alt="Logo" className="w-12 h-12" />
         </div>
         <div className="text-[#A9A9A9] w-full flex-col flex space-y-3">
@@ -57,11 +57,11 @@ const Footer = () => {
       </div>
       {/* ABout */}
       <div className="lg:flex lg:justify-between lg:items-center">
-        <div className="grid grid-cols-10 shadow-xs  mt-5 py-6 px-4 space-x-3 rounded-lg w-full lg:max-w-lg bg-[#00020c]">
-          <div className="col-span-3 sm:col-span-2 lg:col-span-2 md:col-span-1">
+        <div className="flex shadow-xs  mt-5 py-6 px-4 space-x-3 rounded-lg w-full   lg:max-w-md xl:max-w-lg bg-[#00020c]">
+          <div className="w-[5rem] flex-shrink-0 flex-grow-0 ">
             <img src={CodeChef} alt="logo" />
           </div>
-          <div className="col-span-7 sm:col-span-8 md:col-span-9 lg:col-span-8">
+          <div className="">
             <h1 className="text-white text-xl mb-3">About CodeChef SRM RMP </h1>
             <p className="text-[#A9A9A9] text-[0.9rem]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -74,33 +74,33 @@ const Footer = () => {
           </div>
         </div>
         {/* Tearms and Conditons */}
-        <div className="mt-8 flex flex-wrap  lg:flex-col gap-5 lg:gap-3 lg:items-end justify-center lg:justify-start text-gray-300 transition-all duration-200 ">
+        <div className="mt-8 flex flex-wrap lg:flex-col gap-5  lg:items-end justify-center text-gray-300/[91%] transition-all duration-200 lg:gap-[0.85rem]">
           <a
             href="https://twitter.com/CodeChefSrmRmp"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-[#A9A9A9] text-[0.9rem] lg:text-lg">
+            className="hover:text-[#A9A9A9] text-[0.9rem] lg:text-[1.1rem]">
             SRM RMP Code of Conduct
           </a>
           <a
             href="https://twitter.com/CodeChefSrmRmp"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-[#A9A9A9] text-[0.9rem] lg:text-lg">
+            className="hover:text-[#A9A9A9] text-[0.9rem] lg:text-[1.1rem]">
             Terms and Conditions
           </a>
           <a
             href="https://twitter.com/CodeChefSrmRmp"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-[#A9A9A9] text-[0.9rem] lg:text-lg ">
+            className="hover:text-[#A9A9A9] text-[0.9rem] lg:text-[1.1rem] ">
             Privacy Policy
           </a>
           <a
             href="https://twitter.com/CodeChefSrmRmp"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-[#A9A9A9] text-[0.9rem] lg:text-lg">
+            className="hover:text-[#A9A9A9] text-[0.9rem] lg:text-[1.1rem]">
             Sponsor Us
           </a>
         </div>
@@ -108,9 +108,8 @@ const Footer = () => {
 
       {/* Bottom */}
       <div className="flex items-center flex-col sm:flex-row justify-between mt-10 gap-3 px-1">
-        <p className="text-[#A9A9A9] text-[0.8rem] sm:text-[0.9rem] text-center ">
-          Architected with <FaHeart className="inline-block mx-1 " /> by
-          CodeChefSRM RMP Team
+        <p className="text-[#A9A9A9] text-[0.8rem] sm:text-[0.9rem] text-center flex items-center justify-center gap-2">
+          Architected with <FaHeart /> by CodeChefSRM RMP Team
         </p>
         <div>
           <a href="https://twitter.com/CodeChefSrmRmp" rel="noreferrer">
