@@ -77,7 +77,7 @@ const Tracks = () => {
           onMouseLeave={() =>
             setDescription('General description for all tracks')
           }
-          className="w-2/3 mx-auto hover:bg-transparent hover:text-white border-2 border-black hover:border-white hover:animate-none bg-yellow-600 mt-10 px-4 py-2 rounded-lg text-4xl cursor-pointer shadow-black shadow-xl animate-pulse text-center">
+          className="w-full md:w-2/3 mx-auto hover:bg-transparent hover:text-white border-2 border-black hover:border-white hover:animate-none bg-yellow-600 mt-10 px-4 py-2 rounded-lg text-4xl cursor-pointer shadow-black shadow-xl animate-pulse text-center">
           Sponsor Track
         </h1>
       </div>
