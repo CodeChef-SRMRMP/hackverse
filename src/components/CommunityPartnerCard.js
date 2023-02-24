@@ -10,31 +10,15 @@ const CommunityPartnerCard = () => {
       <div className="m-4 rounded-lg bg-[#202021]/60 backdrop-blur-3xl mx-5 md:mx-10 lg:mx-20 p-5 py-7 text-white dark:text-black dark:shadow-gray-500">
         <Marquee pauseOnHover gradient={false} speed={200}>
           <div className="flex items-center space-x-20 mx-10">
-            <img
-              className="w-32"
-              src={require('../sampleAssets/1.png')}
-              alt=""
-            />
-            <img
-              className="w-32"
-              src={require('../sampleAssets/2.png')}
-              alt=""
-            />
-            <img
-              className="w-32"
-              src={require('../sampleAssets/3.png')}
-              alt=""
-            />
-            <img
-              className="w-32"
-              src={require('../sampleAssets/4.png')}
-              alt=""
-            />
-            <img
-              className="w-32"
-              src={require('../sampleAssets/5.png')}
-              alt=""
-            />
+            {Array(10)
+              .fill(1)
+              .map((_, i) => (
+                <img
+                  className="w-32"
+                  src={require('../assets/images/sponsor-blank.png')}
+                  alt=""
+                />
+              ))}
           </div>
         </Marquee>
       </div>
