@@ -1,4 +1,5 @@
 import Header from './components/Header';
+import { Oval } from 'react-loader-spinner';
 import { ConfigProvider, theme } from 'antd';
 import { useTheme } from './context/useTheme';
 import SponsorsCard from './components/SponsorsCard';
@@ -7,7 +8,7 @@ import CommunityPartnerCard from './components/CommunityPartnerCard';
 import WhySponsorUs from './components/WhySponsorUs';
 import SessionLayout from './components/SessionLayout';
 import { useParams } from 'react-router-dom';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Footer from './components/Footer';
 import PrizeSection from './components/PrizeSection';
 import Tracks from './components/Tracks';
@@ -44,6 +45,28 @@ const App = () => {
     }
   }, [id, sectionRefs?.headerRef, sectionRefs?.sessions]);
 
+  const [loading, setLoading] = useState(false);
+
+  window.addEventListener('load', (event) => {
+    setLoading(false);
+  });
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <Oval
+          strokeColor="grey"
+          secondaryColor="#fff"
+          strokeWidth="5"
+          color="red"
+          animationDuration="0.75"
+          width="96"
+          visible={true}
+        />
+      </div>
+    );
+  }
+
   return (
     <ConfigProvider
       theme={{
@@ -60,8 +83,8 @@ const App = () => {
         <SessionLayout sessionRef={sectionRefs.sessions} />
         <CommunityPartnerCard />
         <FaqSection />
-        <Footer />
       </div>
+      <Footer />
     </ConfigProvider>
   );
 };
