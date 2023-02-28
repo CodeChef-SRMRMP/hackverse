@@ -55,9 +55,10 @@ const Tracks = () => {
       </p>
       <div className="bg-black/60 mt-5 p-10 backdrop-blur-xl px-10 lg:px-20">
         <div className="flex flex-wrap gap-5 items-end justify-center md:justify-between lg:justify-evenly rounded-md text-white">
-          {tracks?.map(({ name, desc }) => {
+          {tracks?.map(({ name, desc }, index) => {
             return (
               <h1
+                key={index}
                 onMouseEnter={() => {
                   setDescription(desc);
                 }}

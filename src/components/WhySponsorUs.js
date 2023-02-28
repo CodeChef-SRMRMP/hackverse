@@ -53,10 +53,8 @@ const WhySponsorUs = () => {
           slidesPerView={1}
           spaceBetween={50}
           modules={[Navigation, EffectFade, Autoplay]}
-          onSlideChange={() => console.log('slide change')}
           autoplay={{ delay: 2000 }}
-          pagination={{ clickable: true }}
-          onSwiper={(swiper) => console.log(swiper)}>
+          pagination={{ clickable: true }}>
           <SwiperSlide>
             <img
               src={require('../assets/images/previousEvents/buidlers-connect.png')}

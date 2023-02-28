@@ -14,6 +14,7 @@ const CommunityPartnerCard = () => {
               .fill(1)
               .map((_, i) => (
                 <img
+                  key={i}
                   className="w-32"
                   src={require('../assets/images/sponsor-blank.png')}
                   alt=""

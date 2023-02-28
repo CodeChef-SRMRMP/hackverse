@@ -20,6 +20,7 @@ const SponsorsCard = () => {
           <div className="flex items-center space-x-20 mx-10">
             {sponsors.map((sponsor, i) => (
               <img
+                key={i}
                 className="h-20 object-cover object-center"
                 src={sponsor}
                 alt=""
