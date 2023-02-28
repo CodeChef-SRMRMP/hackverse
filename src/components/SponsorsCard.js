@@ -1,6 +1,14 @@
 import React from 'react';
 import Marquee from 'react-fast-marquee';
 
+const sponsors = [
+  require('../assets/images/sponsors/gold/koinbx.png'),
+  require('../assets/images/sponsors/silver/devfolio.png'),
+  require('../assets/images/sponsors/silver/replit.png'),
+  require('../assets/images/sponsors/silver/solana.png'),
+  require('../assets/images/sponsors/silver/filecoin.png'),
+];
+
 const SponsorsCard = () => {
   return (
     <>
@@ -10,15 +18,13 @@ const SponsorsCard = () => {
       <div className="m-4 rounded-lg bg-black/60 backdrop-blur-3xl mx-5 md:mx-10 lg:mx-20 p-5 py-7 text-white dark:text-black dark:shadow-gray-500">
         <Marquee pauseOnHover gradient={false} speed={200}>
           <div className="flex items-center space-x-20 mx-10">
-            {Array(10)
-              .fill(1)
-              .map((_, i) => (
-                <img
-                  className="w-32"
-                  src={require('../assets/images/sponsor-blank.png')}
-                  alt=""
-                />
-              ))}
+            {sponsors.map((sponsor, i) => (
+              <img
+                className="h-20 object-cover object-center"
+                src={sponsor}
+                alt=""
+              />
+            ))}
           </div>
         </Marquee>
       </div>

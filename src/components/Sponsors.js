@@ -59,7 +59,7 @@ const Sponsors = () => {
               <img
                 src={sponsor.img}
                 alt={sponsor.title}
-                className="w-full h-20 object-cover object-center rounded-md"
+                className="w-full md:h-20 object-cover object-center rounded-md"
               />
             </div>
           ))}
