@@ -6,56 +6,8 @@ const Sponsors = () => {
       img: SponsorImg,
       title: 'sponsor 1',
     },
-    {
-      img: SponsorImg,
-      title: 'sponsor 2',
-    },
-    {
-      img: SponsorImg,
-      title: 'sponsor 3',
-    },
-    {
-      img: SponsorImg,
-      title: 'sponsor 4',
-    },
-    {
-      img: SponsorImg,
-      title: 'sponsor 5',
-    },
-    {
-      img: SponsorImg,
-      title: 'sponsor 6',
-    },
-    {
-      img: SponsorImg,
-      title: 'sponsor 7',
-    },
   ];
   const goldenSponsors = [
-    {
-      img: SponsorImg,
-      title: 'sponsor 1',
-    },
-    {
-      img: SponsorImg,
-      title: 'sponsor 2',
-    },
-    {
-      img: SponsorImg,
-      title: 'sponsor 3',
-    },
-    {
-      img: SponsorImg,
-      title: 'sponsor 4',
-    },
-    {
-      img: SponsorImg,
-      title: 'sponsor 5',
-    },
-    {
-      img: SponsorImg,
-      title: 'sponsor 6',
-    },
     {
       img: SponsorImg,
       title: 'sponsor 7',
@@ -63,7 +15,7 @@ const Sponsors = () => {
   ];
   const silverSponsors = [
     {
-      img: require('../assets/images/sponsors/silver/devfolio.avif'),
+      img: require('../assets/images/sponsors/silver/devfolio.png'),
       title: 'Devfolio',
     },
     {
@@ -73,6 +25,10 @@ const Sponsors = () => {
     {
       img: require('../assets/images/sponsors/silver/solana.png'),
       title: 'sponsor 3',
+    },
+    {
+      img: require('../assets/images/sponsors/silver/filecoin.png'),
+      title: 'sponsor 4',
     },
   ];
   return (
@@ -117,7 +73,7 @@ const Sponsors = () => {
         </div>
       </div>
       <div className="bg-black/60 mt-5 p-10 backdrop-blur-xl px-10 lg:px-20 rounded-md">
-        <div className="grid gap-4 w-full md:grid-cols-4 lg:grid-cols-6 items-center justify-center md:justify-between lg:justify-evenly rounded-md text-white">
+        <div className="grid gap-4 w-full md:grid-cols-4 lg:grid-cols-5 items-center justify-center md:justify-between lg:justify-evenly rounded-md text-white">
           <div className="-space-y-3 ">
             <p className="text-2xl md:text-3xl lg:text-4xl text-center md:text-left">
               Silver Sponsors
@@ -126,6 +82,12 @@ const Sponsors = () => {
           {silverSponsors.map((sponsor, index) => (
             <div key={index} className="">
               <img
+                loading="lazy"
+                onLoad={() => (
+                  <img
+                    alt=""
+                    src={require('../assets/images/sponsor-blank.png')}></img>
+                )}
                 src={sponsor.img}
                 alt={sponsor.title}
                 className="w-full h-full rounded-md"

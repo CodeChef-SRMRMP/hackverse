@@ -1,4 +1,9 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay, EffectFade } from 'swiper';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 const WhySponsorUs = () => {
   const message =
@@ -43,7 +48,46 @@ const WhySponsorUs = () => {
         </div>
       </div>
       <div className="w-full lg:w-1/2 bg-[#202021]/50 backdrop-blur-3xl rounded-lg p-5">
-        <h1 className="text-xl">Our Previous Events</h1>
+        <h1 className="text-xl mb-3">Our Previous Events</h1>
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={50}
+          modules={[Navigation, EffectFade, Autoplay]}
+          onSlideChange={() => console.log('slide change')}
+          autoplay={{ delay: 2000 }}
+          pagination={{ clickable: true }}
+          onSwiper={(swiper) => console.log(swiper)}>
+          <SwiperSlide>
+            <img
+              src={require('../assets/images/previousEvents/buidlers-connect.png')}
+              className="h-42"
+              alt=""
+            />
+            <p className="text-center text-white bg-black/40 p-2 text-xl w-full absolute bottom-0">
+              Builder's Connect
+            </p>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src={require('../assets/images/previousEvents/demistifying-web3.png')}
+              className="h-42"
+              alt=""
+            />
+            <p className="text-center text-white bg-black/40 p-2 text-xl w-full absolute bottom-0">
+              Demistifying Web3
+            </p>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src={require('../assets/images/previousEvents/texplore.png')}
+              className="h-42"
+              alt=""
+            />
+            <p className="text-center text-white bg-black/40 p-2 text-xl w-full absolute bottom-0">
+              Texplore
+            </p>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </div>
   );

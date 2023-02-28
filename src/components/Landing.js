@@ -2,9 +2,7 @@ import React from 'react';
 import { useTheme } from '../context/useTheme';
 const Landing = () => {
   const { scrollPosition } = useTheme();
-  const { darkMode } = useTheme();
 
-  console.log(process.env.REACT_APP_DEVFOLIO_SLUGID);
   return (
     <div className="text-center hero-bg overflow-hidden justify-center min-h-[calc(100vh_-_100px)] items-center flex flex-col lg:gap-0 gap-4">
       <h1
