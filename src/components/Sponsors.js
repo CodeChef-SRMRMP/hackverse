@@ -1,15 +1,10 @@
 import React from 'react';
 import SponsorImg from '../assets/images/sponsor-blank.png';
 const Sponsors = () => {
-  const diamondSponsors = [
-    {
-      img: SponsorImg,
-      title: 'sponsor 1',
-    },
-  ];
+  const diamondSponsors = [];
   const goldenSponsors = [
     {
-      img: SponsorImg,
+      img: require('../assets/images/sponsors/gold/koinbx.png'),
       title: 'sponsor 7',
     },
   ];
@@ -48,7 +43,6 @@ const Sponsors = () => {
                 alt={sponsor.title}
                 className="w-full h-full rounded-md"
               />
-              <h1 className="text-center">{sponsor.title}</h1>
             </div>
           ))}
         </div>
@@ -65,9 +59,8 @@ const Sponsors = () => {
               <img
                 src={sponsor.img}
                 alt={sponsor.title}
-                className="w-full h-full rounded-md"
+                className="w-full h-20 object-cover object-center rounded-md"
               />
-              <h1 className="text-center">{sponsor.title}</h1>
             </div>
           ))}
         </div>
