@@ -2,6 +2,9 @@ import React from 'react';
 import { useTheme } from '../context/useTheme';
 const Landing = () => {
   const { scrollPosition } = useTheme();
+  const { darkMode } = useTheme();
+
+  console.log(process.env.REACT_APP_DEVFOLIO_SLUGID);
   return (
     <div className="text-center hero-bg overflow-hidden justify-center min-h-[calc(100vh_-_100px)] items-center flex flex-col lg:gap-0 gap-4">
       <h1
@@ -27,6 +30,13 @@ const Landing = () => {
         <span className="text-lg md:text-2xl lg:text-4xl">தமிழ்நாட்டின்</span>{' '}
         Largest Web 3.0 Hackathon
       </h1>
+      <p className="mt-10">
+        <button
+          className="apply-button"
+          data-hackathon-slug={process.env.REACT_APP_DEVFOLIO_SLUGID}
+          data-button-theme="dark-inverted"
+          style={{ height: 44, width: 312 }}></button>
+      </p>
     </div>
   );
 };

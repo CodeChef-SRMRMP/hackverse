@@ -15,6 +15,16 @@ import Sponsors from './components/Sponsors';
 import FaqSection from './components/FaqSection';
 
 const App = () => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   const { darkMode } = useTheme();
 
   const { id } = useParams();
@@ -45,11 +55,11 @@ const App = () => {
         <SponsorsCard />
         <WhySponsorUs />
         <Tracks />
-        <Sponsors/>
+        <Sponsors />
         <PrizeSection />
         <SessionLayout sessionRef={sectionRefs.sessions} />
         <CommunityPartnerCard />
-        <FaqSection/>
+        <FaqSection />
         <Footer />
       </div>
     </ConfigProvider>
