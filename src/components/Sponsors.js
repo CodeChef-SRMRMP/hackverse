@@ -1,5 +1,4 @@
 import React from 'react';
-import SponsorImg from '../assets/images/sponsor-blank.png';
 const Sponsors = () => {
   const diamondSponsors = [];
   const goldenSponsors = [
