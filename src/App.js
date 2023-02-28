@@ -11,6 +11,8 @@ import { useEffect, useRef } from 'react';
 import Footer from './components/Footer';
 import PrizeSection from './components/PrizeSection';
 import Tracks from './components/Tracks';
+import Sponsors from './components/Sponsors';
+import FaqSection from './components/FaqSection';
 
 const App = () => {
   const { darkMode } = useTheme();
@@ -43,9 +45,11 @@ const App = () => {
         <SponsorsCard />
         <WhySponsorUs />
         <Tracks />
+        <Sponsors/>
         <PrizeSection />
         <SessionLayout sessionRef={sectionRefs.sessions} />
         <CommunityPartnerCard />
+        <FaqSection/>
         <Footer />
       </div>
     </ConfigProvider>
