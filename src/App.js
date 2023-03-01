@@ -14,6 +14,7 @@ import PrizeSection from './components/PrizeSection';
 import Tracks from './components/Tracks';
 import Sponsors from './components/Sponsors';
 import FaqSection from './components/FaqSection';
+import OrganizersInfo from './components/OrganizersInfo';
 
 const App = () => {
   useEffect(() => {
@@ -83,6 +84,7 @@ const App = () => {
         <SessionLayout sessionRef={sectionRefs.sessions} />
         <CommunityPartnerCard />
         <FaqSection />
+        <OrganizersInfo />
       </div>
       <Footer />
     </ConfigProvider>
