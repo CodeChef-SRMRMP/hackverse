@@ -5,6 +5,8 @@ import { Navigation, Autoplay, EffectFade } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
+// Auto Scroll for the content
+
 const WhySponsorUs = () => {
   const message =
     'Hey Prayasu, We would like to sponsor your event. Please get back to us. Thanks!';
@@ -17,14 +19,7 @@ const WhySponsorUs = () => {
         <h3 className="ml-2 text-gray-200 text-xl">
           HELP US MAKE HACKVERSE BIGGER AND BETTER
         </h3>
-        <p className="ml-2 text-sm text-gray-300">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-          nibh nulla, vulputate fringilla tempor vitae, eleifend eu risus. Ut
-          interdum eget nisi non volutpat. Vivamus nec dui quis metus commodo
-          fringilla. Integer malesuada neque at diam efficitur, id venenatis
-          felis vulputate. Class aptent taciti sociosqu ad litora torquent per
-          conubia nostra, per inceptos himenaeos.
-        </p>
+        <p className="ml-2 text-sm text-gray-300"></p>
         <div className="ml-2 space-x-2">
           <button className="bg-gray-500 px-4 py-2 rounded-lg active:scale-75 ease-out duration-100">
             <a
