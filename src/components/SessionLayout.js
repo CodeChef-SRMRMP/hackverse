@@ -21,10 +21,12 @@ const SessionLayout = ({ sessionRef }) => {
             <h1 className="text-4xl text-center lg:text-left">SHORTLISTING</h1>
           </div>
           <p className="text-center lg:text-left text-xs ml-1">
-            Nulla deserunt elit veniam sint eu in. Irure irure eiusmod cillum eu
-            pariatur cupidatat nostrud. Elit laboris pariatur aute adipisicing
-            aliquip cillum do enim mollit velit adipisicing consequat. Aliqua
-            amet in voluptate officia esse reprehenderit.
+            Shortlisting refers to the process of selecting a smaller, more
+            manageable number of candidates from a larger pool of applicants for
+            further consideration in the hiring process. It typically involves
+            reviewing resumes, cover letters, and/or job applications to
+            identify those candidates who possess the necessary qualifications,
+            skills, and experience required for the job
           </p>
         </div>
         <div className="lg:mt-[5rem] lg:inline-block space-y-3">
@@ -37,10 +39,15 @@ const SessionLayout = ({ sessionRef }) => {
             <h1 className="text-4xl text-center lg:text-left">REVIEW</h1>
           </div>
           <p className="text-center lg:text-left text-xs ml-1">
-            Nulla deserunt elit veniam sint eu in. Irure irure eiusmod cillum eu
-            pariatur cupidatat nostrud. Elit laboris pariatur aute adipisicing
-            aliquip cillum do enim mollit velit adipisicing consequat. Aliqua
-            amet in voluptate officia esse reprehenderit.
+            Review refers to the process of examining something carefully in
+            order to evaluate its quality, effectiveness, or suitability. The
+            object of review can vary widely and may include anything from
+            written content to performance evaluations to product prototypes.
+            The purpose of a review is typically to identify areas of strength
+            or weakness and to provide feedback or recommendations for
+            improvement. Reviews can be conducted by individuals or teams and
+            may involve a variety of methods, such as testing, analysis, or
+            comparison to industry standards.
           </p>
         </div>
         <div className="lg:mt-[10rem] lg:inline-block space-y-3 ">
@@ -53,10 +60,13 @@ const SessionLayout = ({ sessionRef }) => {
             <h1 className="text-4xl text-center lg:text-left">PITCHING</h1>
           </div>
           <p className="text-center lg:text-left text-xs ml-1">
-            Nulla deserunt elit veniam sint eu in. Irure irure eiusmod cillum eu
-            pariatur cupidatat nostrud. Elit laboris pariatur aute adipisicing
-            aliquip cillum do enim mollit velit adipisicing consequat. Aliqua
-            amet in voluptate officia esse reprehenderit.
+            Pitching refers to the process of presenting an idea, product, or
+            service in a compelling and persuasive manner in order to secure
+            support or investment. The goal of a pitch is typically to persuade
+            the audience to take action, such as investing in a business or
+            approving a project. Pitches can be given in a variety of formats,
+            including formal presentations, elevator pitches, or video pitches,
+            and may be delivered in person, over the phone, or via email.
           </p>
         </div>
         <div className="lg:mt-[15rem] lg:inline-block space-y-3 ">
@@ -66,13 +76,10 @@ const SessionLayout = ({ sessionRef }) => {
             <p className="text-center lg:text-left text-[#A9A9A9] text-sm">
               Round IV
             </p>
-            <h1 className="text-4xl text-center lg:text-left">FINAL PITCH</h1>
+            <h1 className="text-4xl text-center lg:text-left">WINNERS</h1>
           </div>
           <p className="text-center lg:text-left text-xs ml-1">
-            Nulla deserunt elit veniam sint eu in. Irure irure eiusmod cillum eu
-            pariatur cupidatat nostrud. Elit laboris pariatur aute adipisicing
-            aliquip cillum do enim mollit velit adipisicing consequat. Aliqua
-            amet in voluptate officia esse reprehenderit.
+            Winners will be decided and will be getting the prize money
           </p>
         </div>
         <div className="hidden lg:block">

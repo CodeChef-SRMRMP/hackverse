@@ -83,7 +83,7 @@ const App = () => {
         <PrizeSection />
         <SessionLayout sessionRef={sectionRefs.sessions} />
         <CommunityPartnerCard />
-        <FaqSection />
+        {/* <FaqSection /> */}
         {/* <OrganizersInfo /> */}
       </div>
       <Footer />
