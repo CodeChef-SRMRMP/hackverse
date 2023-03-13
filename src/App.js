@@ -13,7 +13,7 @@ import Footer from './components/Footer';
 import PrizeSection from './components/PrizeSection';
 import Tracks from './components/Tracks';
 import Sponsors from './components/Sponsors';
-import FaqSection from './components/FaqSection';
+// import FaqSection from './components/FaqSection';
 // import OrganizersInfo from './components/OrganizersInfo';
 
 const App = () => {
