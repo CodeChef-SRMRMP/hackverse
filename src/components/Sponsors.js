@@ -1,5 +1,5 @@
 import React from 'react';
-const Sponsors = () => {
+const Sponsors = ({ sponsorsRef }) => {
   const diamondSponsors = [];
   const goldenSponsors = [
     {
@@ -26,7 +26,7 @@ const Sponsors = () => {
     },
   ];
   return (
-    <div className="m-10 mx-5 md:mx-10 lg:mx-20">
+    <div ref={sponsorsRef} className="m-10 mx-5 md:mx-10 lg:mx-20">
       <h1 className="dark:text-white text-5xl text-left">Our Sponsors</h1>
       <div className="bg-black/60 mt-5 p-10 backdrop-blur-xl px-10 lg:px-20 rounded-md">
         <div className="grid gap-4 md:grid-cols-4 lg:grid-cols-6 items-start justify-center md:justify-between lg:justify-evenly rounded-md text-white">

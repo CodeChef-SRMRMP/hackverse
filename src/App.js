@@ -34,6 +34,7 @@ const App = () => {
   const sectionRefs = {
     headerRef: useRef(null),
     sessions: useRef(null),
+    sponsors: useRef(null),
   };
 
   useEffect(() => {
@@ -41,10 +42,19 @@ const App = () => {
       sectionRefs?.sessions?.current?.scrollIntoView({ behavior: 'smooth' });
     }
 
+    if (id === 'sponsors') {
+      sectionRefs?.sponsors?.current?.scrollIntoView({ behavior: 'smooth' });
+    }
+
     if (id === undefined) {
       sectionRefs?.headerRef?.current?.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [id, sectionRefs?.headerRef, sectionRefs?.sessions]);
+  }, [
+    id,
+    sectionRefs?.headerRef,
+    sectionRefs?.sessions,
+    sectionRefs?.sponsors,
+  ]);
 
   const [loading, setLoading] = useState(false);
 
@@ -79,7 +89,7 @@ const App = () => {
         <SponsorsCard />
         <WhySponsorUs />
         <Tracks />
-        <Sponsors />
+        <Sponsors sponsorsRef={sectionRefs?.sessions} />
         <PrizeSection />
         <SessionLayout sessionRef={sectionRefs.sessions} />
         <CommunityPartnerCard />
