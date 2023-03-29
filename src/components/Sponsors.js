@@ -24,6 +24,10 @@ const Sponsors = ({ sponsorsRef }) => {
       img: require('../assets/images/sponsors/silver/filecoin.png'),
       title: 'sponsor 4',
     },
+    {
+      img: require('../assets/images/sponsors/silver/tamil-crypto.png'),
+      title: 'sponsor 5',
+    },
   ];
   return (
     <div ref={sponsorsRef} className="m-10 mx-5 md:mx-10 lg:mx-20">

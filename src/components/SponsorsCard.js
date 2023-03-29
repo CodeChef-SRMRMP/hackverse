@@ -7,6 +7,7 @@ const sponsors = [
   require('../assets/images/sponsors/silver/replit.png'),
   require('../assets/images/sponsors/silver/solana.png'),
   require('../assets/images/sponsors/silver/filecoin.png'),
+  require('../assets/images/sponsors/silver/tamil-crypto.png'),
 ];
 
 const SponsorsCard = () => {
