@@ -70,12 +70,16 @@ const Footer = () => {
           <div className="">
             <h1 className="text-white text-xl mb-3">About CodeChef SRM RMP </h1>
             <p className="text-[#A9A9A9] text-[0.9rem]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium tenetur, sint quam molestiae vitae suscipit provident
-              cupiditate qui quis possimus in quisquam, inventore impedit
-              facilis libero fuga, vero ipsa odio. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Et impedit dicta facilis provident
-              exercitationem
+              CodeChef SRM IST Ramapuram, is an ambitious yet responsible
+              college club which not only builds great exposures but also guides
+              people on to the pathway of success. Be it any local hackathons,
+              college-funded events, or national events our members have aced
+              everywhere. For a particular insight, we had a hattrick of winning
+              different hackathons in different parts of the south. We also have
+              organized Chennai’s very first WEB3 meet-up at The World Trade
+              Centre which is till date the biggest successful event of WEB3 in
+              this city. Till date, all our events have been successful from
+              small to big!
             </p>
           </div>
         </div>
