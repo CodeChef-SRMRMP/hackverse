@@ -1,6 +1,11 @@
 import React from 'react';
 const Sponsors = ({ sponsorsRef }) => {
-  const diamondSponsors = [];
+  const diamondSponsors = [
+    {
+      img: require('../assets/images/sponsors/diamond/1.png'),
+      title: 'sponsor 7',
+    },
+  ];
   const goldenSponsors = [
     {
       img: require('../assets/images/sponsors/gold/koinbx.png'),
@@ -40,11 +45,11 @@ const Sponsors = ({ sponsorsRef }) => {
             </p>
           </div>
           {diamondSponsors.map((sponsor, index) => (
-            <div key={index} className="">
+            <div key={index} className="w-24  h-24">
               <img
                 src={sponsor.img}
                 alt={sponsor.title}
-                className="w-full h-full rounded-md"
+                className=" object-fill object-center rounded-md"
               />
             </div>
           ))}
