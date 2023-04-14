@@ -61,7 +61,7 @@ const Header = ({ headerRef }) => {
                 <Link
                   target="_blank"
                   to={
-                    key != 4
+                    key !== 4
                       ? '/' + content.toLocaleLowerCase().split(' ')[0]
                       : 'https://hackverse.vhive.org/home'
                   }>
@@ -100,7 +100,7 @@ const Header = ({ headerRef }) => {
                 <Link
                   target="_blank"
                   to={
-                    key != 4
+                    key !== 4
                       ? '/' + content.toLocaleLowerCase().split(' ')[0]
                       : 'https://hackverse.vhive.org/home'
                   }>
