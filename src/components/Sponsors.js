@@ -1,39 +1,45 @@
 import React from 'react';
+
+function importAll(r) {
+  let images = {};
+  r.keys().map((item, index) => {
+    images[item.replace('./', '')] = r(item);
+  });
+  return images;
+}
+
+const diamond = importAll(
+  require.context(
+    '../assets/images/sponsors/diamond/',
+    false,
+    /\.(png|jpe?g|svg)$/
+  )
+);
+const gold = importAll(
+  require.context(
+    '../assets/images/sponsors/gold/',
+    false,
+    /\.(png|jpe?g|svg)$/
+  )
+);
+
+const silver = importAll(
+  require.context(
+    '../assets/images/sponsors/silver/',
+    false,
+    /\.(png|jpe?g|svg)$/
+  )
+);
+
+const web3 = importAll(
+  require.context(
+    '../assets/images/sponsors/web3eco/',
+    false,
+    /\.(png|jpe?g|svg)$/
+  )
+);
+
 const Sponsors = ({ sponsorsRef }) => {
-  const diamondSponsors = [
-    {
-      img: require('../assets/images/sponsors/diamond/1.png'),
-      title: 'sponsor 7',
-    },
-  ];
-  const goldenSponsors = [
-    {
-      img: require('../assets/images/sponsors/gold/koinbx.png'),
-      title: 'sponsor 7',
-    },
-  ];
-  const silverSponsors = [
-    {
-      img: require('../assets/images/sponsors/silver/devfolio.png'),
-      title: 'Devfolio',
-    },
-    {
-      img: require('../assets/images/sponsors/silver/replit.png'),
-      title: 'sponsor 2',
-    },
-    {
-      img: require('../assets/images/sponsors/silver/solana.png'),
-      title: 'sponsor 3',
-    },
-    {
-      img: require('../assets/images/sponsors/silver/filecoin.png'),
-      title: 'sponsor 4',
-    },
-    {
-      img: require('../assets/images/sponsors/silver/tamil-crypto.png'),
-      title: 'sponsor 5',
-    },
-  ];
   return (
     <div ref={sponsorsRef} className="m-10 mx-5 md:mx-10 lg:mx-20">
       <h1 className="dark:text-white text-5xl text-left">Our Sponsors</h1>
@@ -44,12 +50,12 @@ const Sponsors = ({ sponsorsRef }) => {
               Diamond Sponsors
             </p>
           </div>
-          {diamondSponsors.map((sponsor, index) => (
+          {Object.values(diamond).map((sponsor, index) => (
             <div key={index} className="w-24  h-24">
               <img
-                src={sponsor.img}
-                alt={sponsor.title}
-                className=" object-fill object-center rounded-md"
+                src={sponsor}
+                alt={index}
+                className="scale-[200%] object-cover h-20 mx-auto object-center rounded-md"
               />
             </div>
           ))}
@@ -62,36 +68,50 @@ const Sponsors = ({ sponsorsRef }) => {
               Golden Sponsors
             </p>
           </div>
-          {goldenSponsors.map((sponsor, index) => (
+          {Object.values(gold).map((sponsor, index) => (
             <div key={index} className="">
               <img
-                src={sponsor.img}
-                alt={sponsor.title}
-                className="w-full md:h-20 object-cover object-center rounded-md"
+                src={sponsor}
+                alt={index}
+                className="w-full h-10 object-cover md:h-20 object-center rounded-md"
               />
             </div>
           ))}
         </div>
       </div>
       <div className="bg-black/60 mt-5 p-10 backdrop-blur-xl px-10 lg:px-20 rounded-md">
-        <div className="grid gap-4 w-full md:grid-cols-4 lg:grid-cols-5 items-center justify-center md:justify-between lg:justify-evenly rounded-md text-white">
+        <div className="grid gap-4 w-full md:grid-cols-4 lg:grid-cols-6 items-center justify-center md:justify-between lg:justify-evenly rounded-md text-white">
           <div className="-space-y-3 ">
             <p className="text-2xl md:text-3xl lg:text-4xl text-center md:text-left">
               Silver Sponsors
             </p>
           </div>
-          {silverSponsors.map((sponsor, index) => (
+          {Object.values(silver).map((sponsor, index) => (
             <div key={index} className="">
               <img
                 loading="lazy"
-                onLoad={() => (
-                  <img
-                    alt=""
-                    src={require('../assets/images/sponsor-blank.png')}></img>
-                )}
-                src={sponsor.img}
-                alt={sponsor.title}
-                className="w-full h-full rounded-md"
+                src={sponsor}
+                alt={index}
+                className="h-20  w-48 mx-auto object-contain rounded-md"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="bg-black/60 mt-5 p-10 backdrop-blur-xl px-10 lg:px-20 rounded-md">
+        <div className="grid gap-4 w-full md:grid-cols-4 lg:grid-cols-6 items-center justify-center md:justify-between lg:justify-evenly rounded-md text-white">
+          <div className="-space-y-3 ">
+            <p className="text-2xl md:text-3xl lg:text-4xl text-center md:text-left">
+              Web3 Ecosystem
+            </p>
+          </div>
+          {Object.values(web3).map((sponsor, index) => (
+            <div key={index} className="">
+              <img
+                loading="lazy"
+                src={sponsor}
+                alt={index}
+                className="h-20 scale-[200%] w-48 mx-auto object-contain rounded-md"
               />
             </div>
           ))}

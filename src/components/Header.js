@@ -11,7 +11,13 @@ const Header = ({ headerRef }) => {
 
   const [openDrawer, setOpenDrawer] = useState(false);
 
-  const contents = ['SESSIONS', 'SPONSORS', 'JOIN US', 'LEADERBOARD'];
+  const contents = [
+    'SESSIONS',
+    'SPONSORS',
+    'JOIN US',
+    'LEADERBOARD',
+    'COMMUNITY',
+  ];
 
   return (
     <>
@@ -52,7 +58,13 @@ const Header = ({ headerRef }) => {
                 key={key}
                 className="navButton"
                 onClick={() => setOpenDrawer(!openDrawer)}>
-                <Link to={'/' + content.toLocaleLowerCase().split(' ')[0]}>
+                <Link
+                  target="_blank"
+                  to={
+                    key != 4
+                      ? '/' + content.toLocaleLowerCase().split(' ')[0]
+                      : 'https://hackverse.vhive.org/home'
+                  }>
                   {content}
                 </Link>
               </p>
@@ -85,7 +97,13 @@ const Header = ({ headerRef }) => {
           {contents.map((content, key) => {
             return (
               <p key={key} className="navButton">
-                <Link to={'/' + content.toLocaleLowerCase().split(' ')[0]}>
+                <Link
+                  target="_blank"
+                  to={
+                    key != 4
+                      ? '/' + content.toLocaleLowerCase().split(' ')[0]
+                      : 'https://hackverse.vhive.org/home'
+                  }>
                   {content}
                 </Link>
               </p>
