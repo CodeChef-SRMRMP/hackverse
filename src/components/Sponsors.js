@@ -100,7 +100,7 @@ const Sponsors = ({ sponsorsRef }) => {
         <div className="grid gap-4 w-full md:grid-cols-4 lg:grid-cols-6 items-center justify-center md:justify-between lg:justify-evenly rounded-md text-white">
           <div className="-space-y-3 ">
             <p className="text-2xl md:text-3xl lg:text-4xl text-center md:text-left">
-              Web3 Ecosystem
+              Web3 Ecosystem Partner
             </p>
           </div>
           {Object.values(web3).map((sponsor, index) => (
