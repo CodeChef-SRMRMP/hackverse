@@ -12,11 +12,11 @@ const Header = ({ headerRef }) => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const contents = [
-    'SESSIONS',
-    'SPONSORS',
-    'JOIN US',
-    'LEADERBOARD',
-    'COMMUNITY',
+    // 'SESSIONS',
+    // 'SPONSORS',
+    // 'JOIN US',
+    // 'LEADERBOARD',
+    // 'COMMUNITY',
   ];
 
   return (

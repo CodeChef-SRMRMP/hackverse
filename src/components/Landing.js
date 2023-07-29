@@ -4,7 +4,7 @@ const Landing = () => {
   const { scrollPosition } = useTheme();
 
   return (
-    <div className="text-center hero-bg overflow-hidden justify-center min-h-[calc(100vh_-_100px)] items-center flex flex-col lg:gap-0 gap-4">
+    <div className="text-center bg-blue-900/10 hero-bg overflow-hidden justify-center min-h-[calc(100vh_-_100px)] items-center flex flex-col lg:gap-0 gap-4">
       <h1
         style={{ transform: `translateX(${scrollPosition * 0.5}px)` }}
         className="bg-gradient-to-r bg-clip-text text-transparent lg:text-4xl font-bold from-slate-200 to-slate-400 text-xl md:text-2xl">
@@ -19,14 +19,13 @@ const Landing = () => {
           y="50%"
           dy=".35em"
           textAnchor="middle">
-          HACK VERSE
+          HACK VERSE 2.0
         </text>
       </svg>
       <h1
         style={{ transform: `translateX(-${scrollPosition * 0.5}px)` }}
         className="bg-gradient-to-r bg-clip-text text-transparent lowercase text-gray-300 font-bold lg:text-4xl text-sm md:text-4xl from-slate-200 to-slate-400">
-        <span className="text-lg md:text-2xl lg:text-4xl">தமிழ்நாட்டின்</span>{' '}
-        Largest Web 3.0 Hackathon
+        Largest Web3 Hackathon in South India
       </h1>
       <p className="mt-10">
         <button
