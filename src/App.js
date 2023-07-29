@@ -2,19 +2,13 @@ import Header from './components/Header';
 import { Oval } from 'react-loader-spinner';
 import { ConfigProvider, theme } from 'antd';
 import { useTheme } from './context/useTheme';
-import SponsorsCard from './components/SponsorsCard';
+
 import Landing from './components/Landing';
-import CommunityPartnerCard from './components/CommunityPartnerCard';
-import WhySponsorUs from './components/WhySponsorUs';
-import SessionLayout from './components/SessionLayout';
+
 import { useParams } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import Footer from './components/Footer';
-import PrizeSection from './components/PrizeSection';
-import Tracks from './components/Tracks';
-import Sponsors from './components/Sponsors';
-// import FaqSection from './components/FaqSection';
-// import OrganizersInfo from './components/OrganizersInfo';
+
 
 const App = () => {
   useEffect(() => {
