@@ -6,6 +6,13 @@ function importAll(r) {
   return images;
 }
 
+const title = importAll(
+  require.context(
+    '../assets/images/sponsors/title/',
+    false,
+    /\.(png|jpe?g|svg)$/
+  )
+);
 const diamond = importAll(
   require.context(
     '../assets/images/sponsors/diamond/',
@@ -29,7 +36,7 @@ const silver = importAll(
   )
 );
 
-const web3 = importAll(
+const power = importAll(
   require.context(
     '../assets/images/sponsors/web3eco/',
     false,
@@ -41,6 +48,24 @@ const Sponsors = ({ sponsorsRef }) => {
   return (
     <div ref={sponsorsRef} className="m-10 mx-5 md:mx-10 lg:mx-20">
       <h1 className="dark:text-white text-5xl text-left">Our Sponsors</h1>
+      <div className="bg-black/60 mt-5 p-10 backdrop-blur-xl px-10 lg:px-20 rounded-md">
+        <div className="grid gap-4 md:grid-cols-4 lg:grid-cols-6 items-start justify-center md:justify-between lg:justify-evenly rounded-md text-white">
+          <div className="-space-y-3 ">
+            <p className="text-2xl md:text-3xl lg:text-4xl text-center md:text-left">
+            Title Sponsors
+            </p>
+          </div>
+          {Object.values(title).map((sponsor, index) => (
+            <div key={index} className="w-24  h-24">
+              <img
+                src={sponsor}
+                alt={index}
+                className="scale-[200%] object-cover h-20 mx-auto object-center rounded-md"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
       <div className="bg-black/60 mt-5 p-10 backdrop-blur-xl px-10 lg:px-20 rounded-md">
         <div className="grid gap-4 md:grid-cols-4 lg:grid-cols-6 items-start justify-center md:justify-between lg:justify-evenly rounded-md text-white">
           <div className="-space-y-3 ">
@@ -100,10 +125,10 @@ const Sponsors = ({ sponsorsRef }) => {
         <div className="grid gap-4 w-full md:grid-cols-4 lg:grid-cols-6 items-center justify-center md:justify-between lg:justify-evenly rounded-md text-white">
           <div className="-space-y-3 ">
             <p className="text-2xl md:text-3xl lg:text-4xl text-center md:text-left">
-              Web3 Ecosystem Partner
+              Powered By
             </p>
           </div>
-          {Object.values(web3).map((sponsor, index) => (
+          {Object.values(power).map((sponsor, index) => (
             <div key={index} className="">
               <img
                 loading="lazy"

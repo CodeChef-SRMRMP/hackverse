@@ -2,6 +2,9 @@ import Header from './components/Header';
 import { Oval } from 'react-loader-spinner';
 import { ConfigProvider, theme } from 'antd';
 import { useTheme } from './context/useTheme';
+import SessionLayout from './components/SessionLayout';
+// import SponsorsCard from './components/SponsorsCard';
+import Sponsors from './components/Sponsors'
 
 import Landing from './components/Landing';
 
@@ -83,9 +86,9 @@ const App = () => {
         {/* <SponsorsCard /> */}
         {/* <WhySponsorUs /> */}
         {/* <Tracks /> */}
-        {/* <Sponsors sponsorsRef={sectionRefs?.sessions} /> */}
+        <Sponsors sponsorsRef={sectionRefs?.sessions} />
         {/* <PrizeSection /> */}
-        {/* <SessionLayout sessionRef={sectionRefs.sessions} /> */}
+        <SessionLayout sessionRef={sectionRefs.sessions} />
         {/* <CommunityPartnerCard /> */}
         {/* <FaqSection /> */}
         {/* <OrganizersInfo /> */}
