@@ -60,7 +60,8 @@ const Sponsors = ({ sponsorsRef }) => {
               <img
                 src={sponsor}
                 alt={index}
-                className="scale-[200%] object-cover h-20 mx-auto object-center rounded-md"
+                className=" object-cover h-20 mx-auto object-center rounded-md"
+                style={{width:"100px"}}
               />
             </div>
           ))}
@@ -78,7 +79,7 @@ const Sponsors = ({ sponsorsRef }) => {
               <img
                 src={sponsor}
                 alt={index}
-                className="scale-[200%] object-cover h-20 mx-auto object-center rounded-md"
+                className=" object-cover h-20 mx-auto object-center rounded-md"
               />
             </div>
           ))}

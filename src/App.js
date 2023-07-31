@@ -94,7 +94,7 @@ const App = () => {
         {/* <OrganizersInfo /> */}
         <div className="m-10 mx-5 md:mx-10 lg:mx-20">
       <div className="bg-black/60 mt-5 flex flex-wrap gap-5 items-center justify-center px-10 lg:px-20 backdrop-blur-xl h-96 rounded-md text-white p-10">
-      <h1 className="dark:text-white text-5xl text-center p-5 border border-white/60 rounded-md animate-pulse shadow-xl shadow-white/20">Prize Pool of 25K INR</h1>
+      <h1 className="dark:text-white text-5xl text-center p-5 border border-white/60 rounded-md animate-pulse shadow-xl shadow-white/20">Prize Pool of $ 25K</h1>
         </div>
         </div>
       </div>
