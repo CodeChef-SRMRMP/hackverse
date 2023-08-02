@@ -36,6 +36,14 @@ const silver = importAll(
   )
 );
 
+const bronze = importAll(
+  require.context(
+    '../assets/images/sponsors/bronze/',
+    false,
+    /\.(png|jpe?g|svg)$/
+  )
+);
+
 const power = importAll(
   require.context(
     '../assets/images/sponsors/web3eco/',
@@ -111,6 +119,25 @@ const Sponsors = ({ sponsorsRef }) => {
             </p>
           </div>
           {Object.values(silver).map((sponsor, index) => (
+            <div key={index} className="">
+              <img
+                loading="lazy"
+                src={sponsor}
+                alt={index}
+                className="h-20  w-48 mx-auto object-contain rounded-md"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="bg-black/60 mt-5 p-10 backdrop-blur-xl px-10 lg:px-20 rounded-md">
+        <div className="grid gap-4 w-full md:grid-cols-4 lg:grid-cols-6 items-center justify-center md:justify-between lg:justify-evenly rounded-md text-white">
+          <div className="-space-y-3 ">
+            <p className="text-2xl md:text-3xl lg:text-4xl text-center md:text-left">
+              Bronze Sponsors
+            </p>
+          </div>
+          {Object.values(bronze).map((sponsor, index) => (
             <div key={index} className="">
               <img
                 loading="lazy"
