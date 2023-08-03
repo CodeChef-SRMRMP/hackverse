@@ -6,6 +6,10 @@ function importAll(r) {
   return images;
 }
 
+function getAlt(s) {
+  return s.split('/')[3].split('.')[0].replace('_',' ')
+}
+
 const title = importAll(
   require.context(
     '../assets/images/sponsors/title/',
@@ -67,7 +71,7 @@ const Sponsors = ({ sponsorsRef }) => {
             <div key={index} className="w-24  h-24">
               <img
                 src={sponsor}
-                alt={index}
+                alt={getAlt(sponsor)}
                 className=" object-cover h-20 mx-auto object-center rounded-md"
                 style={{width:"100px"}}
               />
@@ -86,7 +90,7 @@ const Sponsors = ({ sponsorsRef }) => {
             <div key={index} className="w-24  h-24">
               <img
                 src={sponsor}
-                alt={index}
+                alt={getAlt(sponsor)}
                 className=" object-cover h-20 mx-auto object-center rounded-md"
               />
             </div>
@@ -104,7 +108,7 @@ const Sponsors = ({ sponsorsRef }) => {
             <div key={index} className="">
               <img
                 src={sponsor}
-                alt={index}
+                alt={getAlt(sponsor)}
                 className="w-full h-10 object-cover md:h-20 object-center rounded-md"
               />
             </div>
@@ -123,7 +127,7 @@ const Sponsors = ({ sponsorsRef }) => {
               <img
                 loading="lazy"
                 src={sponsor}
-                alt={index}
+                alt={getAlt(sponsor)}
                 className="h-20  w-48 mx-auto object-contain rounded-md"
               />
             </div>
@@ -142,7 +146,7 @@ const Sponsors = ({ sponsorsRef }) => {
               <img
                 loading="lazy"
                 src={sponsor}
-                alt={index}
+                alt={getAlt(sponsor)}
                 className="h-20  w-48 mx-auto object-contain rounded-md"
               />
             </div>
@@ -161,7 +165,7 @@ const Sponsors = ({ sponsorsRef }) => {
               <img
                 loading="lazy"
                 src={sponsor}
-                alt={index}
+                alt={getAlt(sponsor)}
                 className="h-20 scale-[200%] w-48 mx-auto object-contain rounded-md"
               />
             </div>
