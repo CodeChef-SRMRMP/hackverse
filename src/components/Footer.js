@@ -23,26 +23,26 @@ const Footer = () => {
         <div className="text-[#A9A9A9] w-full flex-col flex space-y-3">
           <div className="flex sm:gap-8 justify-around sm:justify-end">
             <a
-              href="https://www.instagram.com/codechefsrm.rmp/"
+              href="https://www.instagram.com/hackverseind/"
               target="_blank"
               rel="noreferrer">
               <FaInstagram className="text-[2rem]" />
             </a>
             <a
-              href="https://www.linkedin.com/company/codechef-srmrmp/"
+              href="https://www.linkedin.com/company/hackverse-india/"
               target="_blank"
               rel="noreferrer">
               <FaLinkedin className="text-[2rem]" />
             </a>
             <a
-              href="https://twitter.com/CodeChefSrmRmp"
+              href="https://twitter.com/HackVerseIND/"
               target="_blank"
               rel="noreferrer">
               <FaGithubSquare className="text-[2rem]" />
             </a>
 
             <a
-              href="https://twitter.com/CodeChefSrmRmp"
+              href="https://twitter.com/HackVerseIND/"
               target="_blank"
               rel="noreferrer">
               <FaTwitterSquare className="text-[2rem]" />
@@ -62,28 +62,28 @@ const Footer = () => {
         {/* Tearms and Conditons */}
         <div className="mt-8 flex flex-wrap   justify-between w-full text-gray-300/[91%] transition-all duration-200">
           <a
-            href="https://twitter.com/CodeChefSrmRmp"
+            href="https://twitter.com/HackVerseIND/"
             target="_blank"
             rel="noreferrer"
             className="hover:text-[#A9A9A9] text-[0.9rem] lg:text-[1.1rem]">
-            SRM RMP Code of Conduct
+            Code of Conduct
           </a>
           <a
-            href="https://twitter.com/CodeChefSrmRmp"
+            href="https://twitter.com/HackVerseIND/"
             target="_blank"
             rel="noreferrer"
             className="hover:text-[#A9A9A9] text-[0.9rem] lg:text-[1.1rem]">
             Terms and Conditions
           </a>
           <a
-            href="https://twitter.com/CodeChefSrmRmp"
+            href="https://twitter.com/HackVerseIND/"
             target="_blank"
             rel="noreferrer"
             className="hover:text-[#A9A9A9] text-[0.9rem] lg:text-[1.1rem] ">
             Privacy Policy
           </a>
           <a
-            href="https://twitter.com/CodeChefSrmRmp"
+            href="https://twitter.com/HackVerseIND/"
             target="_blank"
             rel="noreferrer"
             className="hover:text-[#A9A9A9] text-[0.9rem] lg:text-[1.1rem]">

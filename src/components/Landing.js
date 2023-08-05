@@ -13,7 +13,7 @@ const Landing = () => {
       <svg viewBox="0 0 1000 200">
         <Title />
         <text
-          className="text-[13rem] md:text-[11rem] lg:text-9xl"
+          className="text-[10rem] md:text-[11rem] lg:text-9xl"
           id="paint0_linear_3_14"
           x="50%"
           y="50%"
@@ -27,6 +27,12 @@ const Landing = () => {
         className="bg-gradient-to-r bg-clip-text text-transparent lowercase text-gray-300 font-bold lg:text-4xl text-sm md:text-4xl from-slate-200 to-slate-400">
         Largest Web3 Hackathon in South India
       </h1>
+      <h1
+        style={{ transform: `translateX(-${scrollPosition * 0.5}px)` }}
+        className="bg-gradient-to-r bg-clip-text text-transparent lowercase text-gray-300 font-bold lg:text-2xl text-sm md:text-4xl from-slate-200 to-slate-400">
+        27th - 29th October 2023
+      </h1>
+
       <p className="mt-10">
         <button
           className="apply-button"
