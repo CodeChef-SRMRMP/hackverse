@@ -60,7 +60,7 @@ const Footer = () => {
       {/* ABout */}
       <div className="lg:flex lg:justify-between lg:items-center">
         {/* Tearms and Conditons */}
-        <div className="mt-8 flex flex-wrap   justify-between w-full text-gray-300/[91%] transition-all duration-200">
+        {/* <div className="mt-8 flex flex-wrap   justify-between w-full text-gray-300/[91%] transition-all duration-200">
           <a
             href="https://twitter.com/HackVerseIND/"
             target="_blank"
@@ -89,7 +89,7 @@ const Footer = () => {
             className="hover:text-[#A9A9A9] text-[0.9rem] lg:text-[1.1rem]">
             Sponsor Us
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
