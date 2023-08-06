@@ -6,6 +6,17 @@ function importAll(r) {
   return images;
 }
 
+function getAlt(s) {
+  return s.split('/')[3].split('.')[0].replace('_',' ')
+}
+
+const title = importAll(
+  require.context(
+    '../assets/images/sponsors/title/',
+    false,
+    /\.(png|jpe?g|svg)$/
+  )
+);
 const diamond = importAll(
   require.context(
     '../assets/images/sponsors/diamond/',
@@ -29,7 +40,15 @@ const silver = importAll(
   )
 );
 
-const web3 = importAll(
+const bronze = importAll(
+  require.context(
+    '../assets/images/sponsors/bronze/',
+    false,
+    /\.(png|jpe?g|svg)$/
+  )
+);
+
+const power = importAll(
   require.context(
     '../assets/images/sponsors/web3eco/',
     false,
@@ -45,6 +64,25 @@ const Sponsors = ({ sponsorsRef }) => {
         <div className="grid gap-4 md:grid-cols-4 lg:grid-cols-6 items-start justify-center md:justify-between lg:justify-evenly rounded-md text-white">
           <div className="-space-y-3 ">
             <p className="text-2xl md:text-3xl lg:text-4xl text-center md:text-left">
+            Title Sponsors
+            </p>
+          </div>
+          {Object.values(title).map((sponsor, index) => (
+            <div key={index} className="w-24  h-24">
+              <img
+                src={sponsor}
+                alt={getAlt(sponsor)}
+                className=" object-cover h-20 mx-auto object-center rounded-md"
+                style={{width:"100px"}}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="bg-black/60 mt-5 p-10 backdrop-blur-xl px-10 lg:px-20 rounded-md">
+        <div className="grid gap-4 md:grid-cols-4 lg:grid-cols-6 items-start justify-center md:justify-between lg:justify-evenly rounded-md text-white">
+          <div className="-space-y-3 ">
+            <p className="text-2xl md:text-3xl lg:text-4xl text-center md:text-left">
               Diamond Sponsors
             </p>
           </div>
@@ -52,8 +90,8 @@ const Sponsors = ({ sponsorsRef }) => {
             <div key={index} className="w-24  h-24">
               <img
                 src={sponsor}
-                alt={index}
-                className="scale-[200%] object-cover h-20 mx-auto object-center rounded-md"
+                alt={getAlt(sponsor)}
+                className=" object-cover h-20 mx-auto object-center rounded-md"
               />
             </div>
           ))}
@@ -70,7 +108,7 @@ const Sponsors = ({ sponsorsRef }) => {
             <div key={index} className="">
               <img
                 src={sponsor}
-                alt={index}
+                alt={getAlt(sponsor)}
                 className="w-full h-10 object-cover md:h-20 object-center rounded-md"
               />
             </div>
@@ -89,7 +127,7 @@ const Sponsors = ({ sponsorsRef }) => {
               <img
                 loading="lazy"
                 src={sponsor}
-                alt={index}
+                alt={getAlt(sponsor)}
                 className="h-20  w-48 mx-auto object-contain rounded-md"
               />
             </div>
@@ -100,15 +138,34 @@ const Sponsors = ({ sponsorsRef }) => {
         <div className="grid gap-4 w-full md:grid-cols-4 lg:grid-cols-6 items-center justify-center md:justify-between lg:justify-evenly rounded-md text-white">
           <div className="-space-y-3 ">
             <p className="text-2xl md:text-3xl lg:text-4xl text-center md:text-left">
-              Web3 Ecosystem Partner
+              Bronze Sponsors
             </p>
           </div>
-          {Object.values(web3).map((sponsor, index) => (
+          {Object.values(bronze).map((sponsor, index) => (
             <div key={index} className="">
               <img
                 loading="lazy"
                 src={sponsor}
-                alt={index}
+                alt={getAlt(sponsor)}
+                className="h-20  w-48 mx-auto object-contain rounded-md"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="bg-black/60 mt-5 p-10 backdrop-blur-xl px-10 lg:px-20 rounded-md">
+        <div className="grid gap-4 w-full md:grid-cols-4 lg:grid-cols-6 items-center justify-center md:justify-between lg:justify-evenly rounded-md text-white">
+          <div className="-space-y-3 ">
+            <p className="text-2xl md:text-3xl lg:text-4xl text-center md:text-left">
+              Powered By
+            </p>
+          </div>
+          {Object.values(power).map((sponsor, index) => (
+            <div key={index} className="">
+              <img
+                loading="lazy"
+                src={sponsor}
+                alt={getAlt(sponsor)}
                 className="h-20 scale-[200%] w-48 mx-auto object-contain rounded-md"
               />
             </div>
