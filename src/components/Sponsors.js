@@ -7,7 +7,7 @@ function importAll(r) {
 }
 
 function getAlt(s) {
-  return s.split('/')[3].split('.')[0].replace('_',' ')
+  return s.split('/')[3].split('.')[0].replace('_', ' ');
 }
 
 const title = importAll(
@@ -64,16 +64,16 @@ const Sponsors = ({ sponsorsRef }) => {
         <div className="grid gap-4 md:grid-cols-4 lg:grid-cols-6 items-start justify-center md:justify-between lg:justify-evenly rounded-md text-white">
           <div className="-space-y-3 ">
             <p className="text-2xl md:text-3xl lg:text-4xl text-center md:text-left">
-            Title Sponsors
+              Title Sponsors
             </p>
           </div>
           {Object.values(title).map((sponsor, index) => (
-            <div key={index} className="w-24  h-24">
+            <div key={index} className="w-24 mx-auto  h-24">
               <img
                 src={sponsor}
                 alt={getAlt(sponsor)}
                 className=" object-cover h-20 mx-auto object-center rounded-md"
-                style={{width:"100px"}}
+                style={{ width: '100px' }}
               />
             </div>
           ))}
