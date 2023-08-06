@@ -39,7 +39,7 @@ const Landing = () => {
       <p className="mt-10">
         <button
           className="apply-button"
-          data-hackathon-slug={process.env.REACT_APP_DEVFOLIO_SLUGID}
+          data-hackathon-slug="hackverse-tamil-nadu"
           data-button-theme="dark-inverted"
           style={{ height: 44, width: 312 }}></button>
       </p>
