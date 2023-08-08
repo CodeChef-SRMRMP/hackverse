@@ -4,11 +4,8 @@ import AgendaEventCard from './AgendaEventCard';
 const Agenda = () => {
   const [day, setDay] = useState(0);
 
-  const [stage, setStage] = useState(0);
-
   const handelDayChange = (day) => {
     setDay(day);
-    setStage(0);
   };
 
   return (
@@ -45,100 +42,50 @@ const Agenda = () => {
             </span>
           </div>
         </div>
-        <div
-          className={`flex max-w-[600px] h-full  mt-8 w-full border-[2px] overflow-hidden rounded-t-[16px]  border-white mx-auto ${
-            day === 0 && 'hidden'
-          }  `}>
-          <div
-            onClick={() => setStage(0)}
-            className={`px-2 mobile-md:px-3 cursor-pointer text-center  text-[24px]  pt-[8px] pb-[5px]  w-full   ${
-              stage === 0 && 'bg-gray-100  text-black'
-            }  `}>
-            MainStage
-          </div>
-          <div
-            onClick={() => setStage(1)}
-            className={`px-2 mobile-md:px-3 pt-[8px]  text-center pb-[5px] text-[24px]  cursor-pointer  w-full   ${
-              stage === 1 && 'bg-gray-100  text-black'
-            } `}>
-            SubStage 1
-          </div>
-          <div
-            onClick={() => setStage(2)}
-            className={`px-2 mobile-md:px-3 pt-[8px]  text-center pb-[5px]  text-[24px]  cursor-pointer w-full   ${
-              stage === 2 && 'bg-gray-100  text-black'
-            } `}>
-            SubStage 2
-          </div>
-        </div>
+
         <div
           className={` max-w-[600px] p-[16px] w-full border-[2px] border-t-0 overflow-hidden rounded-b-[16px]  border-white mx-auto  items-center`}>
           <div className={`${day !== 0 && 'hidden'}`}>
-            {stage === 0 && (
-              <>
-                <AgendaEventCard time={'10:10 AM IST'} name={'Francesco'} />
-                <AgendaEventCard time={'7:10 PM IST'} name={'RaJ'} />
-              </>
-            )}
+            <AgendaEventCard
+              time={'4:00 - 7:00 PM IST'}
+              name={'HackVerse 2.0 Launch Event'}
+            />
           </div>
           <div className={`${day !== 1 && 'hidden'}`}>
-            {stage === 0 && (
-              <>
-                <AgendaEventCard
-                  time={'10:10 - 10:30 AM IST'}
-                  name={'Francesco'}
-                  breif={
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-                  }
-                />
-              </>
-            )}
-
-            {stage === 1 && (
-              <>
-                <AgendaEventCard
-                  time={'10:10 - 10:30 AM IST'}
-                  name={'Francco'}
-                />
-              </>
-            )}
-
-            {stage === 2 && (
-              <>
-                <AgendaEventCard
-                  time={'11:20 - 11:30 AM IST'}
-                  name={'Francesco'}
-                />
-              </>
-            )}
+            <AgendaEventCard time={'7:30 AM IST'} name={'Checkin Starts'} />
+            <AgendaEventCard
+              time={'7:30 - 9:00 AM IST'}
+              name={'Networking and Team Making'}
+            />
+            <AgendaEventCard
+              time={'9:00 - 12:00 PM IST'}
+              name={'Hackathon Inagruation + Speaker Slot'}
+            />
+            <AgendaEventCard time={'12:00 - 1:00 PM IST'} name={'Lunch'} />
+            <AgendaEventCard time={'1:00 PM IST'} name={'Hackathon Starts'} />
+            <AgendaEventCard
+              time={'4:00 - 6:00 PM IST'}
+              name={'Workshop + Tea Break'}
+            />
+            <AgendaEventCard time={'9:30 - 10:30 PM IST'} name={'Dinner'} />
+            <AgendaEventCard
+              time={'12:00 - 01:00 AM IST'}
+              name={'Games and Fun Activities'}
+            />
           </div>
           <div className={`${day !== 2 && 'hidden'}`}>
-            {stage === 0 && (
-              <>
-                <AgendaEventCard
-                  time={'10:10 - 10:30 AM IST'}
-                  name={'Francesco'}
-                />
-              </>
-            )}
-
-            {stage === 1 && (
-              <>
-                <AgendaEventCard
-                  time={'10:10 - 10:30 AM IST'}
-                  name={'Francco'}
-                />
-              </>
-            )}
-
-            {stage === 2 && (
-              <>
-                <AgendaEventCard
-                  time={'11:20 - 11:30 AM IST'}
-                  name={'Francesco'}
-                />
-              </>
-            )}
+            <AgendaEventCard
+              time={'8:00 - 9:00 AM IST'}
+              name={'Networking + Breakfast'}
+            />
+            <AgendaEventCard time={'9:00 - 10:00 AM IST'} name={'Workshop'} />
+            <AgendaEventCard time={'1:00 PM IST'} name={'Hackathon Ends'} />
+            <AgendaEventCard time={'1:00 - 2:00 PM IST'} name={'Lunch'} />
+            <AgendaEventCard time={'2:00 - 4:00 PM IST'} name={'Judging'} />
+            <AgendaEventCard
+              time={'4:00 - 6:00 PM IST'}
+              name={'Closing Ceremony'}
+            />
           </div>
         </div>
       </div>
